@@ -2,24 +2,25 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Welcome to my personal portfolio! I wear many hats, so please feel free to browse!
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Discord: Metassassin</p>
+    <p>TryHackMe: MetaSphere</p>
+    <script src="https://tryhackme.com/badge/1031259"></script>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+As you know, I am Metassassin. I'm an IT professional, CTF team captain, ethical hacker, etc. My dream is to become a penetration tester and social engineer, and I will not stop until I get there - dreaming is not enough for me. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+The team I lead is called Hellbound, which is a passionate group of bright individuals who love to solve complex puzzles. Feel free to check us out on [CTFtime](https://ctftime.org/team/243673). As of writing this, we are top 25 in the USA, and top 203 in the world.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+<em>"Anyone who loves to play chess knows that it’s enough to defeat your opponent...you don’t have to loot his kingdom or seize his assets to make it worthwhile."</em>
+<strong>-Kevin Mitnick</strong>
