@@ -2,96 +2,174 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Metassassin
+    - name: Age
+      value: 24
+    - name: Location
+      value: Dallas, TX, USA
     - name: Languages
-      value: English, German
+      value: English, Spanish
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Master of Science - Cybersecurity and Information Assurance
+      institution: Western Governors University
+      year: 2024
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - My pursuit of a Master of Science in Cybersecurity and Information Assurance (MSCSIA) was fueled by a desire to further expand my expertise and contribute meaningfully to the security landscape. This advanced degree demanded rigorous research, strategic thinking, and a commitment to continuous growth. It deepened my understanding of complex security architectures, governance, and compliance while honing my leadership skills. Through hands-on projects and in-depth analysis, I learned to tackle multifaceted security challenges with resilience and creativity. The program fostered my determination to not only keep pace with evolving threats but to anticipate them, solidifying my commitment to making a lasting impact in the field of cybersecurity.
+            
+    - title: Bachelor of Science - Cybersecurity and Information Assurance
+      institution: Western Governors University
+      year: 2023
       description:
-        - Description 1.
-        - Description 2.
+        - After completing my degree in Computer Information Systems, I chose to pursue a Bachelor of Science in Cybersecurity and Information Assurance (BSCSIA) to deepen my understanding of the increasingly complex world of information security. This program required discipline and determination, pushing me to constantly evolve my technical knowledge and critical thinking skills. I embraced the challenge, driven by a deep curiosity about how systems work and how vulnerabilities can be mitigated or eliminated. This degree not only solidified my technical foundation but also strengthened my ability to adapt to new technologies and security paradigms. It instilled in me the importance of staying vigilant and persistent in an ever-changing field.
+        
+    - title: Associate of Applied Science - Computer Information Systems
+      institution: Aims Community College
+      year: 2021
+      description:
+        - I pursued a degree in Computer Information Systems with a focus on cybersecurity because, much like an artist, I am driven by a desire to craft, but in this case, it’s about constructing secure systems that protect critical information. Just as art requires creativity, cybersecurity demands innovative thinking and adaptability to stay ahead of ever-evolving threats. Both disciplines call for precision, attention to detail, and an ability to see things from different perspectives—whether it's interpreting a digital landscape or analyzing a complex network. The rigor of cybersecurity, like that of Studio Art, involves problem-solving, resilience, and the willingness to constantly refine and improve. In the same way an artist captures vision in form, I’m passionate about translating complex security challenges into elegant, functional solutions that safeguard the digital world.
+        
+    - title: Associate of Art - Studio Art
+      institution: Aims Community College
+      year: 2020
+      description:
+        - I pursued a Studio Art degree because I am driven by the profound need to create, express, and communicate in ways that transcend words. The field of art demands not only creativity, but also discipline, attention to detail, and the ability to see the world from unique perspectives. It requires resilience in the face of challenges, adaptability to experiment with new techniques, and the capacity to critically analyze and refine one’s work. As an artist, I’ve cultivated problem-solving skills, a sharp eye for aesthetics, and an openness to explore both the known and unknown. Studio Art is not just about producing visuals—it is about translating emotion, narrative, and vision into something tangible, a skillset that is valuable across many fields. A focus in photography and drawing. 
+
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Senior Cybersecurity Analyst
+      institution: Redacted for Privacy - Global Food Manufacturer
+      year: 2022 - Current
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - title: Responsibilities
+          contents: 
+            - Incident response planning/incident response (war room, playbooks, IRP)
+            - Web penetration testing and reporting
+            - Security policy and procedure creation
+            - Threat hunting
+            - Quarterly security awareness articles
+            - Project management and change control
+            - Security alert response
+            - Table-top exercise planning, creation and delivery
+            - Endpoint security analysis
+            - Physical security
+            - Computer forensics
+            - Managing AV/EDR/XDR and SIEM solutions
+            - Managing in-house lab and documentation (Proxmox with kali linux, parrot os, ubuntu, etc.)
+            - Threat intelligence - managing RSS feeds
+            - Maintaining IPS IP address blocklist
+            - Ticket queue management
+        - title: Proficiencies and Skills
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+            - Python scripting
+            - Training team members
+            - Conducting inverviews
+            - Purple teaming
+            - NMAP, Metasploit, FTK, etc.
+            - Elastic SIEM management
+            - Public speaking
+            - Social engineering
+            - Blackbox penetration testing
+            - Leading investigations
+            - Risk assessment
+            - Azure cloud
+            - Windows, Linux and MacOS
+            - Cyber kill chain by Lockheed Martin
+            - NIST 2.0, SEC, GDPR
+    - title: Security Administrator
+      institution: Redacted for Privacy - Global Food Manufacturer
+      year: 2021 - 2022
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - title: Responsibilities
+          contents: 
+            - AD account creation, maintenance and termination
+            - AD access control
+            - Application access control
+            - File server access
+            - Project management
+            - SAP security
+            - Security alert response
+            - Password policy control
+            - Security awareness training
+            - Vulnerability scanning
+            - Azure cloud security
+            - ITAM administration
+            - Managing EDR and SIEM solution
+            - Ticket queue management
+        - title: Proficiencies and Skills
+          contents:
+            - SAP security
+            - Active directory
+            - IoT penetration testing
+            - Nessus
+            - Public speaking
+            - Windows and Linux
+            - Bitlocker
+            - NIST
+            - Training new employees
+    - title: Desktop Support Technician
+      institution: Redacted for Privacy - Global Food Manufacturer
+      year: 2018 - 2021
       description:
+        - title: Responsibilities
+          contents: 
+            - Desktop, tablet, laptop, thin client, layer 1 & 2 networking, phone, television and conference room troubleshooting
+            - Antivirus solution management
+            - Endpoint forensic imaging
+            - Endpoint golden image creation, review and validation
+            - Application management
+            - Endpoint hardware replacement
+            - Ethernet cable termination and punchdowns
+            - Supporting five major locations - headquarters, trucking division office, warehouse, hangar and plant-based food division office.
+            - Managing Windows OS security updates and versioning
+            - SAP ordering/Inventory management
+            - Ticket queue management
+            - Malware removal
+            - Evaluation and selection of standard laptops for the company
+        - title: Proficiencies and Skills
+          contents:
+            - Legal hold
+            - Proficiency in many applications
+            - Microsoft applications
+            - Microsoft windows
+            - File recovery
+            - Secure equipment disposal
+            - Endpoint password bypassing
+            - Working with international employees
+            - Training new employees
+            - SCCM
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Certifications
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - year: 2024
+      items:
+        - ISC2 Certified Information Systems Security Professional (CISSP)
+    - year: 2023
+      items:
+        - CompTIA A+
+        - CompTIA Project+
+        - CompTIA Advanced Security Practitioner (CASP+)
+        - EC-Council Certified Ethical Hacker (CEH)
+        - LPI Linux Essentials
+        - ISC2 Systems Security Certified Practitioner (SSCP)
+        - ISC2 Certified Cloud Security Professional (CCSP)
+    - year: 2022
+      items:
+        - CompTIA Security+
+        - CompTIA CySA+
+        - CompTIA PenTest+
+        - CompTIA Cloud+
+    - year: 2021
+      items:
+        - CompTIA IT Fundamentals (ITF+)
+        - CompTIA Network+
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
-
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
+- title: Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Capture the Flag events, Ethical Hacking, Locksport, Botany, Chess, Cardistry, Computer Gaming, Running/Hiking, Fishing, etc.
