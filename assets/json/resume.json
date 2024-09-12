@@ -11,13 +11,6 @@
       "countryCode": "US",
       "region": "Texas"
     },
-    "profiles": [
-      {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
-      }
-    ]
   },
   "work": [
     {
@@ -30,7 +23,7 @@
     },
     {
       "name": "[Redacted for Privacy] Global Food Manufacturer",
-      "position": "Senior Cybersecurity Analyst",
+      "position": "Security Administrator",
       "startDate": "2021",
       "endDate": "2022",
       "summary": "I have held a series of roles for this organization including 'desktop support technician,' 'security administrator,' and 'cybersecurity analyst.' My experience through these positions has been vast and deep, and is better explained using my 'list of accomplishments.' Really, the gist of it is that I support and secure a global Fortune 200 company, which has given me extensive experience with understanding the complexities of working in a corporate environment.",
