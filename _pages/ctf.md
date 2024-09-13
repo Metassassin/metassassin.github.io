@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /ctf/
-title: ctf
+title: CTF
 description: Information and resources around CTFs.
 nav: true
 nav_order: 4
