@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: about
 title: CTF
 permalink: /ctf/
 subtitle: Information and resources around CTFs and my team's history!
