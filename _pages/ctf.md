@@ -15,6 +15,8 @@ The competitive side of these events is global, hosting teams from every technic
 
 Our goal is to provide opportunities for competitors of all kinds to get better. We are working on a website, hosting our own event, and creating resources that will be helpful to newbies and pros. 
 
+At the individual level, I focus particularly on OSINT, but I have dipped my toes into other topics. I enjoy OSINT especially because I enjoy the realworld application that many of the challenges offer. See a location that you need or want to identify? I have the skills for that. You have information on an account or person that needs tracked down? I do that. OSINT is far and above one of the more easy categories to practice due to the less technical nature, but this is one of the reasons I originally assembled a team: there is only upwards room to grow when you surround yourself with brilliant people. I learn something new everytime I compete, and I love interacting with passionate and like-minded peers. 
+
 
 <h2>Resources</h2>
 <ul>
