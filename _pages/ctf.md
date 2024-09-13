@@ -1,17 +1,10 @@
 ---
 layout: about
-title: CTF
 permalink: /ctf/
-subtitle: Information and resources around CTFs and my team's history!
+title: CTF
+description: Information and resources around CTFs and my team's history!
 nav: true
 nav_order: 4
-
-profile:
-  align: right
-  image: Banner 1.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>CTFtime: Hellbound</p>
 ---
 
 As I have previously mentioned, I am the captain of a CTF team called Hellbound. The nuts and bolts of it, is that my team is assembled of complex puzzle solvers with different specialties and skills. We are comprised of mostly USA based students, artists, hackers, etc. The puzzles that we solve are very technical, and operate in categories like reverse engineering, OSINT, PWN, cryptography, blockchain, etc. Hacking really isn't as mystical as it may seem, all it means is that the team is very intelligent, but we hone our skills to drive security and privacy into the future for the better.
