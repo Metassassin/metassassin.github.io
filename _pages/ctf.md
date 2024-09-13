@@ -1,8 +1,8 @@
 ---
-layout: page
-permalink: /ctf/
+layout: default
 title: CTF
-description: Information and resources around CTFs.
+permalink: /ctf/
+subtitle: Information and resources around CTFs and my team's history!
 nav: true
 nav_order: 4
 
