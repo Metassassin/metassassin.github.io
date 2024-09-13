@@ -19,7 +19,7 @@ Our goal is to provide opportunities for competitors of all kinds to get better.
 <ul>
   <li> If you want to check out our resource list on Google sheets, it is available <a href="https://docs.google.com/spreadsheets/d/1Jm-VsO2xZABC5zkOwncXBkAF6CAlQk8m_2L8V6owMiI/edit?usp=sharing">here.</a></li>
   <li>To view and submit an application to join the team, please fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCrJSS5Nyfw7MVfrNEewPp75Muyar1T7ikdZZ_NEMtXRbyCw/viewform?usp=sf_link">Google form.</a></li>
-  <li>For other general inquiries, please send an email to <a href="emailto:inquiry@teamhellbound.com">inquiry@teamhellbound.com</a></li>
+  <li>For other general inquiries, please send an email to <a href="mailto:inquiry@teamhellbound.com">inquiry@teamhellbound.com</a></li>
   <li>Our website is not yet complete, but when it is <a href="https://teamhellbound.com">teamhellbound.com</a> is the spot to go.</li>
 </ul>
 <img align=center src="/assets/img/Hellhound.jpg" alt="Hellhound" style="width:512px;">
