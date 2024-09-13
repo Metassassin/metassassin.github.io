@@ -10,6 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Discord: Metassassin</p>
+    <p>CTFtime: Enma</p>
     <p>TryHackMe: MetaSphere</p>
     <script src="https://tryhackme.com/badge/1031259"></script>
 
