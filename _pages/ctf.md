@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: page
 permalink: /ctf/
 title: CTF
 description: Information and resources around CTFs and my team's history!
