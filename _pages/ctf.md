@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /ctf/
-title: CTF
+title: ctf
 description: Information and resources around CTFs and my team's history!
 nav: true
 nav_order: 4
