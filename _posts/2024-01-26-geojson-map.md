@@ -4,6 +4,7 @@ title: CSAW CTF 2024 - Authentic Chinese Food
 date: 2024-09-17
 description: A simple and fun OSINT challenge from CSAW CTF 2024
 tags: write-ups
+categories: ctf
 map: true
 
 authors:
