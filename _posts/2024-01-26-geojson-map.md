@@ -2,10 +2,9 @@
 layout: distill
 title: CSAW CTF 2024 - Authentic Chinese Food
 date: 2024-09-17
-description: A simple and fun OSINT challenge from CSAW CTF 2024
+description: A simple and fun OSINT challenge
 tags: write-ups
 categories: ctf
-map: true
 
 authors:
   - name: Metassassin
@@ -27,44 +26,7 @@ This challenge from CSAW was a great geolocation challenge, with the added diffi
 
 ## Steps
 
-```geojson
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -73.98732882416402,
-              40.691467737668205
-            ],
-            [
-              -73.98732882416402,
-              40.69265542843533
-            ],
-            [
-              -73.98885231888497,
-              40.69265542843533
-            ],
-            [
-              -73.98885231888497,
-              40.691467737668205
-            ],
-            [
-              -73.98732882416402,
-              40.691467737668205
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    }
-  ]
-}
-```
+1.) Filler text
 
 ---
 
