@@ -1,57 +1,30 @@
 ---
-layout: post
-title: a post with geojson
-date: 2024-01-26 17:57:00
-description: this is what included geojson code could look like
-tags: formatting charts maps
-categories: sample-posts
+layout: distill
+title: CSAW CTF 2024 - Authentic Chinese Food
+date: 2024-09-17
+description: A simple and fun OSINT challenge from CSAW CTF 2024
+tags: write-ups
 map: true
+
+authors:
+  - name: Metassassin
+    url: "https://metassassin.github.io"
+    affiliations:
+      name: Hellbound
+
+toc:
+  - name: Introduction
+  - name: Steps
+  - name: Lessons Learned
 ---
 
-This is an example post with some [geojson](https://geojson.org/) code. The support is provided thanks to [Leaflet](https://leafletjs.com/). To create your own visualization, go to [geojson.io](https://geojson.io/).
+## Introduction
 
-````markdown
-```geojson
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -60.11363029935569,
-              -2.904625022183211
-            ],
-            [
-              -60.11363029935569,
-              -3.162613728707967
-            ],
-            [
-              -59.820894493858034,
-              -3.162613728707967
-            ],
-            [
-              -59.820894493858034,
-              -2.904625022183211
-            ],
-            [
-              -60.11363029935569,
-              -2.904625022183211
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    }
-  ]
-}
-```
-````
+This challenge from CSAW was a great geolocation challenge, with the added difficulty of discovering additional information about the building and the 
 
-Which generates:
+---
+
+## Steps
 
 ```geojson
 {
@@ -64,24 +37,24 @@ Which generates:
         "coordinates": [
           [
             [
-              -60.11363029935569,
-              -2.904625022183211
+              -73.98732882416402,
+              40.691467737668205
             ],
             [
-              -60.11363029935569,
-              -3.162613728707967
+              -73.98732882416402,
+              40.69265542843533
             ],
             [
-              -59.820894493858034,
-              -3.162613728707967
+              -73.98885231888497,
+              40.69265542843533
             ],
             [
-              -59.820894493858034,
-              -2.904625022183211
+              -73.98885231888497,
+              40.691467737668205
             ],
             [
-              -60.11363029935569,
-              -2.904625022183211
+              -73.98732882416402,
+              40.691467737668205
             ]
           ]
         ],
@@ -91,3 +64,9 @@ Which generates:
   ]
 }
 ```
+
+---
+
+## Lessons Learned
+
+Place holder
