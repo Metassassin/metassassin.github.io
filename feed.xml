@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://metassassin.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://metassassin.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-09-17T22:33:24+00:00</updated><id>https://metassassin.github.io/feed.xml</id><title type="html">Portfolio de Metassassin</title><subtitle>A hacker&apos;s professional portfolio. </subtitle><entry><title type="html">How THIS Website Came to Exist</title><link href="https://metassassin.github.io/blog/2024/website/" rel="alternate" type="text/html" title="How THIS Website Came to Exist"/><published>2024-09-16T00:00:00+00:00</published><updated>2024-09-16T00:00:00+00:00</updated><id>https://metassassin.github.io/blog/2024/website</id><content type="html" xml:base="https://metassassin.github.io/blog/2024/website/"><![CDATA[<h2 id="introduction">Introduction</h2> <p>Something that has become apparent to me since diving into the Cybersecurity field - and really professional life - is the need to showcase my skills. I have done a lot of cool stuff, but I have failed myself by not documenting the step-by-step process of solving problems, doing projects, etc. This website is my formal step into the realm of becoming better documented, and I think it may be helpful to create a sort of guide for what it took me to get here, in case you are in the same boat as I. Through outlining my exact process of creating this, I will be repeating some of what the author of this website theme, <a href="https://github.com/alshedivat/al-folio">al-folio</a>, said so I must credit and thank <a href="https://github.com/alshedivat">alshedivat</a> on Github for the amazing work he has done.</p> <hr/> <h2 id="steps">Steps</h2> <p>Creation of this site started with picking a hosting method. I had Github accounts, but I wanted to own one under my primary moniker if I was going to put so much work into it. Of course, Github natively supports Jekyll theming for Github Pages, so that is the route I took.</p> <p>1.) When your account is created, you can create a new repository if you want to start writing your website yourself, and name it “[username].github.io.” At this point I had already done some research and found that I wanted the al-folio theme, and alshedivat makes it really easy to clone the repository by clicking a <a href="https://github.com/new?template_name=al-folio&amp;template_owner=alshedivat">link</a> in the <code class="language-plaintext highlighter-rouge">INSTALL.md</code> file.</p> <p>2.) These next few steps are also straight from the <code class="language-plaintext highlighter-rouge">INSTALL.md</code> file, so I will just paste them here: In this new repository, go to <code class="language-plaintext highlighter-rouge">Settings -&gt; Actions -&gt; General -&gt; Workflow permissions</code> and give Read and write permissions to GitHub Actions.</p> <p>3.) Open file <code class="language-plaintext highlighter-rouge">_config.yml</code>, set url to https://<your-github-username>.github.io and leave baseurl empty (do NOT delete it), as baseurl:. Wait until the GitHub action with subtitle Deploy site finishes (check your repository Actions tab), which takes ~4 min. Now, in addition to the master branch, your repository has a newly built gh-pages branch. While you are here, you can update some additional base information if you want.</your-github-username></p> <details><summary>Click here for code</summary> <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"> 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://metassassin.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://metassassin.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-09-17T22:51:38+00:00</updated><id>https://metassassin.github.io/feed.xml</id><title type="html">Portfolio de Metassassin</title><subtitle>A hacker&apos;s professional portfolio. </subtitle><entry><title type="html">How THIS Website Came to Exist</title><link href="https://metassassin.github.io/blog/2024/website/" rel="alternate" type="text/html" title="How THIS Website Came to Exist"/><published>2024-09-16T00:00:00+00:00</published><updated>2024-09-16T00:00:00+00:00</updated><id>https://metassassin.github.io/blog/2024/website</id><content type="html" xml:base="https://metassassin.github.io/blog/2024/website/"><![CDATA[<h2 id="introduction">Introduction</h2> <p>Something that has become apparent to me since diving into the Cybersecurity field - and really professional life - is the need to showcase my skills. I have done a lot of cool stuff, but I have failed myself by not documenting the step-by-step process of solving problems, doing projects, etc. This website is my formal step into the realm of becoming better documented, and I think it may be helpful to create a sort of guide for what it took me to get here, in case you are in the same boat as I. Through outlining my exact process of creating this, I will be repeating some of what the author of this website theme, <a href="https://github.com/alshedivat/al-folio">al-folio</a>, said so I must credit and thank <a href="https://github.com/alshedivat">alshedivat</a> on Github for the amazing work he has done.</p> <hr/> <h2 id="steps">Steps</h2> <p>Creation of this site started with picking a hosting method. I had Github accounts, but I wanted to own one under my primary moniker if I was going to put so much work into it. Of course, Github natively supports Jekyll theming for Github Pages, so that is the route I took.</p> <p>1.) When your account is created, you can create a new repository if you want to start writing your website yourself, and name it “[username].github.io.” At this point I had already done some research and found that I wanted the al-folio theme, and alshedivat makes it really easy to clone the repository by clicking a <a href="https://github.com/new?template_name=al-folio&amp;template_owner=alshedivat">link</a> in the <code class="language-plaintext highlighter-rouge">INSTALL.md</code> file.</p> <p>2.) These next few steps are also straight from the <code class="language-plaintext highlighter-rouge">INSTALL.md</code> file, so I will just paste them here: In this new repository, go to <code class="language-plaintext highlighter-rouge">Settings -&gt; Actions -&gt; General -&gt; Workflow permissions</code> and give Read and write permissions to GitHub Actions.</p> <p>3.) Open file <code class="language-plaintext highlighter-rouge">_config.yml</code>, set url to https://<your-github-username>.github.io and leave baseurl empty (do NOT delete it), as baseurl:. Wait until the GitHub action with subtitle Deploy site finishes (check your repository Actions tab), which takes ~4 min. Now, in addition to the master branch, your repository has a newly built gh-pages branch. While you are here, you can update some additional base information if you want.</your-github-username></p> <details><summary>Click here for code</summary> <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"> 
     <span class="na">title</span><span class="pi">:</span> <span class="s">Portfolio de Metassassin</span>
     <span class="na">first_name</span><span class="pi">:</span> <span class="s">Metassassin</span>
     <span class="na">middle_name</span><span class="pi">:</span>
@@ -111,31 +111,7 @@
   </code></pre></figure> </details> <hr/> <h2 id="problems-and-mistakes">Problems and Mistakes</h2> <p>One of the first problems I ran into with the site was some JSON formatting stuff. This led me to restart and clone my repository, install Jupyter, Ruby and Jekyll locally via Homebrew (I am a Mac user by day), and host my site statically. If you do it this way, don’t forget to add Ruby to the $PATH: <code class="language-plaintext highlighter-rouge">echo 'export PATH="/opt/homebrew/opt/ruby/bin:$PATH"' &gt;&gt; ~/.zshrc</code>.</p> <p>This worked well because I could run <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve --trace</code> to ‘bundle’ the site from the repository file location, go to <code class="language-plaintext highlighter-rouge">httpx[:]//localhost:4000</code> and view site changes instantly, but then I had issues pushing the changes back up to the Main branch which is an issue that I still have not resolved. For this reason, I ended up going back to editing straight in Github, which is maybe not preferred because it is really easy to break everything and get lost, but I adopted the methodology of only making small changes at a time and actually documenting the changes in the comments so they could easily be reverted if something did break. My commit history is atrocious to say the least, but the site works.</p> <p>Something additionally interesting about Jekyll running locally, is that when it ‘bundled’ the site, it created a new folder called <code class="language-plaintext highlighter-rouge">/_site/</code>. I had not previously done any research about why this may be, but it is a temporary folder. When I was making changes to the blog locally, they kept getting reverted and I couldn’t figure out why, but it turned out that I was editing the temporary files. I advise not messing with that temporary folder, it will save you some trouble!</p> <hr/> <h2 id="lessons-learned">Lessons Learned</h2> <p>This is some filler text…</p> <p><strong>Note:</strong> <code class="language-plaintext highlighter-rouge">&lt;d-code&gt;</code> blocks do not look good in the dark mode. You can always use the default code-highlight using the <code class="language-plaintext highlighter-rouge">highlight</code> liquid tag:</p> <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
 <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
 <span class="k">return</span> <span class="nx">x</span> <span class="err">\</span><span class="o">*</span> <span class="nx">x</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>]]></content><author><name>Metassassin</name></author><category term="write-ups"/><summary type="html"><![CDATA[My first write-up]]></summary></entry><entry><title type="html">a post with tabs</title><link href="https://metassassin.github.io/blog/2024/tabs/" rel="alternate" type="text/html" title="a post with tabs"/><published>2024-05-01T00:32:13+00:00</published><updated>2024-05-01T00:32:13+00:00</updated><id>https://metassassin.github.io/blog/2024/tabs</id><content type="html" xml:base="https://metassassin.github.io/blog/2024/tabs/"><![CDATA[<p>This is how a post with <a href="https://github.com/Ovski4/jekyll-tabs">tabs</a> looks like. Note that the tabs could be used for different purposes, not only for code.</p> <h2 id="first-tabs">First tabs</h2> <p>To add tabs, use the following syntax:</p> <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{%</span><span class="w"> </span><span class="nt">tabs</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="cp">%}</span>
-
-<span class="cp">{%</span><span class="w"> </span><span class="nt">tab</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="nv">tab-name-1</span><span class="w"> </span><span class="cp">%}</span>
-
-Content 1
-
-<span class="cp">{%</span><span class="w"> </span><span class="nt">endtab</span><span class="w"> </span><span class="cp">%}</span>
-
-<span class="cp">{%</span><span class="w"> </span><span class="nt">tab</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="nv">tab-name-2</span><span class="w"> </span><span class="cp">%}</span>
-
-Content 2
-
-<span class="cp">{%</span><span class="w"> </span><span class="nt">endtab</span><span class="w"> </span><span class="cp">%}</span>
-
-<span class="cp">{%</span><span class="w"> </span><span class="nt">endtabs</span><span class="w"> </span><span class="cp">%}</span>
-</code></pre></div></div> <p>With this you can generate visualizations like:</p> <ul id="log" class="tab" data-tab="092b4186-ecd8-4cf6-a86c-252216ed7563" data-name="log"> <li class="active" id="log-php"> <a href="#">php </a> </li> <li id="log-js"> <a href="#">js </a> </li> <li id="log-ruby"> <a href="#">ruby </a> </li> </ul> <ul class="tab-content" id="092b4186-ecd8-4cf6-a86c-252216ed7563" data-name="log"> <li class="active"> <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">var_dump</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">);</span>
-</code></pre></div></div> </li> <li> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">);</span>
-</code></pre></div></div> </li> <li> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">pputs</span> <span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span>
-</code></pre></div></div> </li> </ul> <h2 id="another-example">Another example</h2> <ul id="data-struct" class="tab" data-tab="73f24350-72b5-408b-a1aa-09ac06372c44" data-name="data-struct"> <li class="active" id="data-struct-yaml"> <a href="#">yaml </a> </li> <li id="data-struct-json"> <a href="#">json </a> </li> </ul> <ul class="tab-content" id="73f24350-72b5-408b-a1aa-09ac06372c44" data-name="data-struct"> <li class="active"> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">hello</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s2">"</span><span class="s">whatsup"</span>
-  <span class="pi">-</span> <span class="s2">"</span><span class="s">hi"</span>
-</code></pre></div></div> </li> <li> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"hello"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"whatsup"</span><span class="p">,</span><span class="w"> </span><span class="s2">"hi"</span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div> </li> </ul> <h2 id="tabs-for-something-else">Tabs for something else</h2> <ul id="something-else" class="tab" data-tab="9de7758c-3bbc-4f1c-82df-0f87d196c349" data-name="something-else"> <li class="active" id="something-else-text"> <a href="#">text </a> </li> <li id="something-else-quote"> <a href="#">quote </a> </li> <li id="something-else-list"> <a href="#">list </a> </li> </ul> <ul class="tab-content" id="9de7758c-3bbc-4f1c-82df-0f87d196c349" data-name="something-else"> <li class="active"> <p>Regular text</p> </li> <li> <blockquote> <p>A quote</p> </blockquote> </li> <li> <p>Hipster list</p> <ul> <li>brunch</li> <li>fixie</li> <li>raybans</li> <li>messenger bag</li> </ul> </li> </ul>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included tabs in a post could look like]]></summary></entry><entry><title type="html">a post with typograms</title><link href="https://metassassin.github.io/blog/2024/typograms/" rel="alternate" type="text/html" title="a post with typograms"/><published>2024-04-29T23:36:10+00:00</published><updated>2024-04-29T23:36:10+00:00</updated><id>https://metassassin.github.io/blog/2024/typograms</id><content type="html" xml:base="https://metassassin.github.io/blog/2024/typograms/"><![CDATA[<p>This is an example post with some <a href="https://github.com/google/typograms/">typograms</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">typograms
+<span class="p">}</span></code></pre></figure>]]></content><author><name>Metassassin</name></author><category term="write-ups"/><summary type="html"><![CDATA[My first write-up]]></summary></entry><entry><title type="html">a post with typograms</title><link href="https://metassassin.github.io/blog/2024/typograms/" rel="alternate" type="text/html" title="a post with typograms"/><published>2024-04-29T23:36:10+00:00</published><updated>2024-04-29T23:36:10+00:00</updated><id>https://metassassin.github.io/blog/2024/typograms</id><content type="html" xml:base="https://metassassin.github.io/blog/2024/typograms/"><![CDATA[<p>This is an example post with some <a href="https://github.com/google/typograms/">typograms</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">typograms
 </span><span class="sb">+----+
 |    |---&gt; My first diagram!
 +----+</span>
@@ -887,4 +863,162 @@ index 3bb754ac..a34839c0 100644
     }
   ]
 }
-</code></pre> <p>Note that this library offer support for both light and dark themes. You can switch between them using the theme switcher in the top right corner of the page.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included echarts code could look like]]></summary></entry></feed>
+</code></pre> <p>Note that this library offer support for both light and dark themes. You can switch between them using the theme switcher in the top right corner of the page.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included echarts code could look like]]></summary></entry><entry><title type="html">a post with chart.js</title><link href="https://metassassin.github.io/blog/2024/chartjs/" rel="alternate" type="text/html" title="a post with chart.js"/><published>2024-01-26T01:04:00+00:00</published><updated>2024-01-26T01:04:00+00:00</updated><id>https://metassassin.github.io/blog/2024/chartjs</id><content type="html" xml:base="https://metassassin.github.io/blog/2024/chartjs/"><![CDATA[<p>This is an example post with some <a href="https://www.chartjs.org/">chart.js</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">chartjs
+</span><span class="sb">{
+  "type": "line",
+  "data": {
+    "labels": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July"
+    ],
+    "datasets": [
+      {
+        "label": "# of bugs",
+        "fill": false,
+        "lineTension": 0.1,
+        "backgroundColor": "rgba(75,192,192,0.4)",
+        "borderColor": "rgba(75,192,192,1)",
+        "borderCapStyle": "butt",
+        "borderDash": [],
+        "borderDashOffset": 0,
+        "borderJoinStyle": "miter",
+        "pointBorderColor": "rgba(75,192,192,1)",
+        "pointBackgroundColor": "#fff",
+        "pointBorderWidth": 1,
+        "pointHoverRadius": 5,
+        "pointHoverBackgroundColor": "rgba(75,192,192,1)",
+        "pointHoverBorderColor": "rgba(220,220,220,1)",
+        "pointHoverBorderWidth": 2,
+        "pointRadius": 1,
+        "pointHitRadius": 10,
+        "data": [
+          65,
+          59,
+          80,
+          81,
+          56,
+          55,
+          40
+        ],
+        "spanGaps": false
+      }
+    ]
+  },
+  "options": {}
+}</span>
+<span class="p">```</span>
+</code></pre></div></div> <p>This is how it looks like:</p> <pre><code class="language-chartjs">{
+  "type": "line",
+  "data": {
+    "labels": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July"
+    ],
+    "datasets": [
+      {
+        "label": "# of bugs",
+        "fill": false,
+        "lineTension": 0.1,
+        "backgroundColor": "rgba(75,192,192,0.4)",
+        "borderColor": "rgba(75,192,192,1)",
+        "borderCapStyle": "butt",
+        "borderDash": [],
+        "borderDashOffset": 0,
+        "borderJoinStyle": "miter",
+        "pointBorderColor": "rgba(75,192,192,1)",
+        "pointBackgroundColor": "#fff",
+        "pointBorderWidth": 1,
+        "pointHoverRadius": 5,
+        "pointHoverBackgroundColor": "rgba(75,192,192,1)",
+        "pointHoverBorderColor": "rgba(220,220,220,1)",
+        "pointHoverBorderWidth": 2,
+        "pointRadius": 1,
+        "pointHitRadius": 10,
+        "data": [
+          65,
+          59,
+          80,
+          81,
+          56,
+          55,
+          40
+        ],
+        "spanGaps": false
+      }
+    ]
+  },
+  "options": {}
+}
+</code></pre> <p>Also another example chart.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">chartjs
+</span><span class="sb">{
+  "type": "doughnut",
+  "data": {
+    "labels": [
+      "Red",
+      "Blue",
+      "Yellow"
+    ],
+    "datasets": [
+      {
+        "data": [
+          300,
+          50,
+          100
+        ],
+        "backgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56"
+        ],
+        "hoverBackgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56"
+        ]
+      }
+    ]
+  },
+  "options": {}
+}</span>
+<span class="p">```</span>
+</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-chartjs">{
+  "type": "doughnut",
+  "data": {
+    "labels": [
+      "Red",
+      "Blue",
+      "Yellow"
+    ],
+    "datasets": [
+      {
+        "data": [
+          300,
+          50,
+          100
+        ],
+        "backgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56"
+        ],
+        "hoverBackgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56"
+        ]
+      }
+    ]
+  },
+  "options": {}
+}
+</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included chart.js code could look like]]></summary></entry></feed>
