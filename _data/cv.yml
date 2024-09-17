@@ -169,6 +169,18 @@
         - CompTIA IT Fundamentals (ITF+)
         - CompTIA Network+
 
+- title: Conferences Attended
+  type: time_table
+  contents:
+    - year: 2024
+      items:
+        - DEF CON 32
+        - RSA 2024
+        - Dallas Cyber Summit
+    - year: 2022
+      items:
+        - DEF CON 30
+
 - title: Interests
   type: list
   contents:
