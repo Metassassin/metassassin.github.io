@@ -20,12 +20,12 @@ toc:
 
 ## Introduction
 
-This challenge from CSAW was a great geolocation challenge, with the added difficulty of discovering additional information about the building and the health grade.
+This challenge from CSAW was a great geolocation/public information challenge, where we needed to identify the address to get further details about the buildings owner, architecture date and the health grade.
 
 Here is the challenge description:
 {% include figure.liquid path="assets/img/OSINT-panda.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 
-The original file from the challenge description:
+The original file, panda.jpg, from the challenge description:
 {% include figure.liquid path="assets/img/panda.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 ---
@@ -36,12 +36,28 @@ The original file from the challenge description:
 
 {% include figure.liquid path="assets/img/OSINT-brooklyn.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 
-2.) With this information, the next clear step is to go to Google Maps, and search for "panda express brooklyn ny."
+2.) With this information, the next clear step is to go to Google Maps, and search for "panda express brooklyn ny." There were a lot less than one may expect, so it was easy to streetview and identify the one in the challenge: 423 Fulton St, Brooklyn, NY 11201.
 
 {% include figure.liquid path="assets/img/OSINT-panda-locations-brooklyn.png" class="img-fluid rounded z-depth-1" zoomable=false %}
+{% include figure.liquid path="assets/img/OSINT-panda-streetview.png" class="img-fluid rounded z-depth-1" zoomable=false %}
+
+3.) Now that we have the address, we need to find the owner (LLC) of the building and the year the building was built. <a href="https://www.compass.com/building/423-fulton-st-brooklyn-ny-11201/293532309167074133/">Compass.com</a> proved to be a fantastic resource and revealed a bunch of information including that the build date was 1920, and the <a href="https://www.bldup.com/organizations/bnn-fulton-flushing-owner-llc">owner</a> is "BNN Fulton Flushing Owner." I looked the company up to be sure this was correct because the LLC name was strange. I also spent an unreasonable amount of time digging through New York building records, which all revealed nothing about the owner, albeit I was able to acquire the build year.
+
+{% include figure.liquid path="assets/img/OSINT-panda-building-info.png" class="img-fluid rounded z-depth-1" zoomable=false %}
+{% include figure.liquid path="assets/img/OSINT-panda-owner.png" class="img-fluid rounded z-depth-1" zoomable=false %}
+
+4.) NYC maintains good record of health ratings for applicable establishments, so I Googled for the health rating and came across this site, <a href="https://a816-health.nyc.gov/ABCEatsRestaurants/#!/Search/50055636">health.nyc.gov</a> and found that the grade was 'pending.'
+
+{% include figure.liquid path="assets/img/OSINT-panda-health.png" class="img-fluid rounded z-depth-1" zoomable=false %}
+
+5.) With all of this information combined, I submitted my flag and got the solve: `csawctf{pending_1920_bnn_fulton_flushing_owner}`
 
 ---
 
 ## Lessons Learned
 
-Place holder
+1.) Compass.com is an excellent resource for building records. New York building records are terrible to dig through.
+
+2.) This challenge was unique, and it gives me great inspiration for challenges of my own that don't limit you to simple geolocation.
+
+3.) Maybe consider other restaurant options if you are in the area looking for authentic Chinese food ;).
