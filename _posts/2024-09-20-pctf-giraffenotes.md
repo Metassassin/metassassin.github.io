@@ -20,7 +20,7 @@ toc:
 
 ## Introduction
 
-Giraffe notes was an easy challenge for Patriot CTF 2024, but I thought it was a solid challenge to warmup on. My team performed really well, but these are the challenges that I worked on alone when I had some time. I don't usually do web, but I read the challenge file and realized it would be pretty quick to complete.
+Giraffe notes was an easy challenge for Patriot CTF 2024, but I thought it was a solid puzzle to warmup on. My team performed really well, but these are the challenges that I worked on alone when I had some time. I don't usually do web, but I read the challenge file and realized it would be pretty quick to complete.
 
 Here is the challenge description:
 {% include figure.liquid path="assets/img/WEB - Giraffe Notes.png" class="img-fluid rounded z-depth-1" zoomable=false %}
