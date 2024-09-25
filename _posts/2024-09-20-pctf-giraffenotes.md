@@ -25,7 +25,7 @@ Giraffe notes was an easy challenge for Patriot CTF 2024, but I thought it was a
 Here is the challenge description:
 {% include figure.liquid path="assets/img/WEB - Giraffe Notes.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 
-The challenge PHP file:
+The challenge PHP file contents:
 {% details Click here for code %}
   {% highlight php %} 
     {% raw %}
