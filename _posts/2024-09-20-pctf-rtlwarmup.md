@@ -20,9 +20,9 @@ toc:
 
 ## Introduction
 
-This challenge....
+This challenge was something pretty different than what I work on typically. It was a beginner/easy challenge, so I decided to see if I could crack it. I had to learn some information, so I will share that here...
 
-RTL.... more to come here
+According to PC Mag, RTL is "A high-level hardware description language (HDL) for defining digital circuits. The circuits are described as a collection of registers, Boolean equations, control logic such as "if-then-else" statements as well as complex event sequences; for example: 'if the clock signal goes from 0 to 1, then load register A with the contents of register B plus register C.'"
 
 Here is the challenge description:
 {% include figure.liquid path="assets/img/MISC - Rtl Warmup.png" class="img-fluid rounded z-depth-1" zoomable=false %}
@@ -274,32 +274,18 @@ The challenge 'flag.vcd' file contents:
 
 ## Steps
 
-1.) The first thing to notice about this challenge is the phone number in the top-right of the image. The area code of this number reveals that the Panda Express we are looking for is in Brooklyn, New York.
+1.) The most immediately obvious thing about this challange is the binary data that changes as the signal state appears to change over time. Unironically, those binary values are the focus of this challenge.
 
-{% include figure.liquid path="assets/img/OSINT-brooklyn.png" class="img-fluid rounded z-depth-1" zoomable=false %}
+2.) 
 
-2.) With this information, the next clear step is to go to Google Maps, and search for "panda express brooklyn ny." There were a lot less than one may expect, so it was easy to streetview and identify the one in the challenge: 423 Fulton St, Brooklyn, NY 11201.
+3.) 
 
-{% include figure.liquid path="assets/img/OSINT-panda-locations-brooklyn.png" class="img-fluid rounded z-depth-1" zoomable=false %}
-{% include figure.liquid path="assets/img/OSINT-panda-streetview.png" class="img-fluid rounded z-depth-1" zoomable=false %}
+4.) 
 
-3.) Now that we have the address, we need to find the owner (LLC) of the building and the year the building was built. <a href="https://www.compass.com/building/423-fulton-st-brooklyn-ny-11201/293532309167074133/">Compass.com</a> proved to be a fantastic resource and revealed a bunch of information including that the build date was 1920, and the <a href="https://www.bldup.com/organizations/bnn-fulton-flushing-owner-llc">owner</a> is "BNN Fulton Flushing Owner." I looked the company up to be sure this was correct because the LLC name was strange. I also spent an unreasonable amount of time digging through New York building records, which all revealed nothing about the owner, albeit I was able to acquire the build year.
-
-{% include figure.liquid path="assets/img/OSINT-panda-building-info.png" class="img-fluid rounded z-depth-1" zoomable=false %}
-{% include figure.liquid path="assets/img/OSINT-panda-owner.png" class="img-fluid rounded z-depth-1" zoomable=false %}
-
-4.) NYC maintains good record of health ratings for applicable establishments, so I Googled for the health rating and came across this site, <a href="https://a816-health.nyc.gov/ABCEatsRestaurants/#!/Search/50055636">health.nyc.gov</a> and found that the grade was 'pending.'
-
-{% include figure.liquid path="assets/img/OSINT-panda-health.png" class="img-fluid rounded z-depth-1" zoomable=false %}
-
-5.) With all of this information combined, I submitted my flag and got the solve: `csawctf{pending_1920_bnn_fulton_flushing_owner}`
+5.) I submitted my flag and got the solve: `PCTF{RTL_i$_D@D_0F_H@rdw@r3}`
 
 ---
 
 ## Lessons Learned
 
-1.) Compass.com is an excellent resource for building records. New York building records are terrible to dig through.
-
-2.) This challenge was unique, and it gives me great inspiration for challenges of my own that don't limit you to simple geolocation.
-
-3.) Maybe consider other restaurant options if you are in the area looking for authentic Chinese food ;).
+1.) 
