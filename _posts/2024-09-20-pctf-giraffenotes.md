@@ -201,14 +201,14 @@ The challenge PHP file contents:
   {% highlight php %} 
     {% raw %}
       <?php
-      $allowed_ip = ['localhost', '127.0.0.1'];
-      
-      if (isset($_SERVER['HTTP_X_FORWARDED_FOR']) && in_array($_SERVER['HTTP_X_FORWARDED_FOR'], $allowed_ip)) {
-          $allowed = true;
-      } else {
-          $allowed = false;
-      }
-      ?>
+        $allowed_ip = ['localhost', '127.0.0.1'];
+        
+        if (isset($_SERVER['HTTP_X_FORWARDED_FOR']) && in_array($_SERVER['HTTP_X_FORWARDED_FOR'], $allowed_ip)) {
+            $allowed = true;
+        } else {
+            $allowed = false;
+        }
+        ?>
     {% endraw %}
   {% endhighlight %} 
 {% enddetails %}
@@ -221,7 +221,7 @@ The challenge PHP file contents:
 
 5.) After adding the header, my request looked like the following:
 
-{% details Click here for code %}
+{% details Click here for text %}
   {% highlight %} 
     {% raw %}
       GET / HTTP/1.1
