@@ -274,18 +274,19 @@ The challenge 'flag.vcd' file contents:
 
 ## Steps
 
-1.) The most immediately obvious thing about this challange is the binary data that changes as the signal state appears to change over time. Unironically, those binary values are the focus of this challenge.
+1.) The most immediately obvious thing about this challange is the binary data that changes as the signal state appears to change over time. Unironically, those binary values are the focus of this challenge, we just need to see past the preceeding 'b' values.
 
-2.) 
+2.) Inside of the description, it is apparent that the first character we need is a capital 'p.' I took the first binary value (01010000), converted it to numerical representation (80), and finally to ASCII (P). It became clear that I had found the path to solve.
 
-3.) 
+3.) I took all of the values into Excel to trim them, but I probably would have written a script if this was any longer. The visual below is easier to follow for how I collected the flag. Duplicates needed to be removed, so I took that liberty for your ease of understanding:
+{% include figure.liquid path="assets/img/MISC - Rtl Chart.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 
-4.) 
-
-5.) I submitted my flag and got the solve: `PCTF{RTL_i$_D@D_0F_H@rdw@r3}`
+4.) I submitted my flag and got the solve: `PCTF{RTL_i$_D@D_0F_H@rdw@r3}`
 
 ---
 
 ## Lessons Learned
 
-1.) 
+1.) Learning new stuff is always a fun time. Prior to this experience, I had not been exposed to RTL, so I am glad to have the chance.
+2.) Persistence and attention to detail are key if you don't know where to start.
+3.) I need to expose myself to more new concepts!
