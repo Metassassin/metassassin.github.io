@@ -22,7 +22,7 @@ toc:
 
 This challenge was something pretty different than what I work on typically. It was a beginner/easy challenge, so I decided to see if I could crack it. I had to learn some information, so I will share that here...
 
-According to PC Mag, RTL is "A high-level hardware description language (HDL) for defining digital circuits. The circuits are described as a collection of registers, Boolean equations, control logic such as "if-then-else" statements as well as complex event sequences; for example: 'if the clock signal goes from 0 to 1, then load register A with the contents of register B plus register C.'"
+According to PC Mag, RTL is "A high-level hardware description language (HDL) for defining digital circuits. The circuits are described as a collection of registers, Boolean equations, control logic such as 'if-then-else' statements as well as complex event sequences; for example: 'if the clock signal goes from 0 to 1, then load register A with the contents of register B plus register C.'"
 
 Here is the challenge description:
 {% include figure.liquid path="assets/img/MISC - Rtl Warmup.png" class="img-fluid rounded z-depth-1" zoomable=false %}
