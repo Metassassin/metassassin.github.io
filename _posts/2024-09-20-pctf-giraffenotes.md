@@ -222,7 +222,7 @@ The challenge PHP file contents:
 5.) After adding the header, my request looked like the following:
 
 {% details Click here for text %}
-  {% highlight %} 
+  {% highlight php %} 
     {% raw %}
       GET / HTTP/1.1
       Host: chal.competitivecyber.club:8081
