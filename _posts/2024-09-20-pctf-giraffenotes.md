@@ -20,7 +20,7 @@ toc:
 
 ## Introduction
 
-Giraffe notes was an easy challenge for Patriot CTF 2024, but I thought it was a solid puzzle to warmup on. My team performed really well, but these are the challenges that I worked on alone when I had some time. I don't usually do web, but I read the challenge file and realized it would be pretty quick to complete.
+Giraffe notes was an easy beginner challenge for Patriot CTF 2024, but I thought it was a solid puzzle to warmup on. The team performed really well, and this was a challenge that I worked on alone when I had some time. I don't usually do web, but I read the challenge file and realized it would be pretty quick to complete.
 
 Here is the challenge description:
 {% include figure.liquid path="assets/img/WEB - Giraffe Notes.png" class="img-fluid rounded z-depth-1" zoomable=false %}
@@ -191,32 +191,63 @@ The challenge PHP file contents:
 
 ## Steps
 
-1.) The first thing to notice about this challenge is the phone number in the top-right of the image. The area code of this number reveals that the Panda Express we are looking for is in Brooklyn, New York.
+1.) Obviously, start by visiting the web page. It taunts us with a message: "Hah! Bet you cant access my notes on giraffes! They're super secure!" Well, I will be the judge of that...
 
-{% include figure.liquid path="assets/img/OSINT-brooklyn.png" class="img-fluid rounded z-depth-1" zoomable=false %}
+{% include figure.liquid path="assets/img/WEB - Giraffe Home.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 
-2.) With this information, the next clear step is to go to Google Maps, and search for "panda express brooklyn ny." There were a lot less than one may expect, so it was easy to streetview and identify the one in the challenge: 423 Fulton St, Brooklyn, NY 11201.
+2.) Take this bit of information, download the html file and open it in a text editor. The very top of this file defines a variable, 'allowed,' whose value is either true or false depending on the presense of HTTP_X_FORWARDED_FOR:
 
-{% include figure.liquid path="assets/img/OSINT-panda-locations-brooklyn.png" class="img-fluid rounded z-depth-1" zoomable=false %}
-{% include figure.liquid path="assets/img/OSINT-panda-streetview.png" class="img-fluid rounded z-depth-1" zoomable=false %}
+{% details Click here for code %}
+  {% highlight php %} 
+    {% raw %}
+      <?php
+      $allowed_ip = ['localhost', '127.0.0.1'];
+      
+      if (isset($_SERVER['HTTP_X_FORWARDED_FOR']) && in_array($_SERVER['HTTP_X_FORWARDED_FOR'], $allowed_ip)) {
+          $allowed = true;
+      } else {
+          $allowed = false;
+      }
+      ?>
+    {% endraw %}
+  {% endhighlight %} 
+{% enddetails %}
 
-3.) Now that we have the address, we need to find the owner (LLC) of the building and the year the building was built. <a href="https://www.compass.com/building/423-fulton-st-brooklyn-ny-11201/293532309167074133/">Compass.com</a> proved to be a fantastic resource and revealed a bunch of information including that the build date was 1920, and the <a href="https://www.bldup.com/organizations/bnn-fulton-flushing-owner-llc">owner</a> is "BNN Fulton Flushing Owner." I looked the company up to be sure this was correct because the LLC name was strange. I also spent an unreasonable amount of time digging through New York building records, which all revealed nothing about the owner, albeit I was able to acquire the build year.
+3.) HTTP_X_FORWARDED_FOR is referencing the HTTP header which defines an IP address or servername that a request is being forwarded on behalf of, and the actual HTTP header for the request appears as `X-Forwarded-For: [IP]`. In this particular instance, the only option to make the variable 'allowed' a true value is localhost, or 127.0.0.1. 
 
-{% include figure.liquid path="assets/img/OSINT-panda-building-info.png" class="img-fluid rounded z-depth-1" zoomable=false %}
-{% include figure.liquid path="assets/img/OSINT-panda-owner.png" class="img-fluid rounded z-depth-1" zoomable=false %}
+4.) In Caido, I started by intercepting requests and visiting the challenge URL to capture the request so I can edit the headers. 
 
-4.) NYC maintains good record of health ratings for applicable establishments, so I Googled for the health rating and came across this site, <a href="https://a816-health.nyc.gov/ABCEatsRestaurants/#!/Search/50055636">health.nyc.gov</a> and found that the grade was 'pending.'
+{% include figure.liquid path="assets/img/WEB - Giraffe Caido Request.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 
-{% include figure.liquid path="assets/img/OSINT-panda-health.png" class="img-fluid rounded z-depth-1" zoomable=false %}
+5.) After adding the header, my request looked like the following:
 
-5.) With all of this information combined, I submitted my flag and got the solve: `csawctf{pending_1920_bnn_fulton_flushing_owner}`
+{% details Click here for code %}
+  {% highlight %} 
+    {% raw %}
+      GET / HTTP/1.1
+      Host: chal.competitivecyber.club:8081
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:130.0) Gecko/20100101 Firefox/130.0
+      Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,/;q=0.8
+      Accept-Language: en-US,en;q=0.5
+      Accept-Encoding: gzip, deflate
+      Connection: keep-alive
+      Upgrade-Insecure-Requests: 1
+      Priority: u=0, i
+      X-Forwarded-For: 127.0.0.1
+    {% endraw %}
+  {% endhighlight %} 
+{% enddetails %}
+
+
+6.) I sent the request, submitted my flag and got the solve: `CACI{1_lik3_g1raff3s_4_l0t}`
+
+{% include figure.liquid path="assets/img/WEB - Giraffe Caido Response.png" class="img-fluid rounded z-depth-1" zoomable=false %}
+{% include figure.liquid path="assets/img/WEB - Giraffe Flag.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 
 ---
 
 ## Lessons Learned
 
-1.) Compass.com is an excellent resource for building records. New York building records are terrible to dig through.
-
-2.) This challenge was unique, and it gives me great inspiration for challenges of my own that don't limit you to simple geolocation.
-
-3.) Maybe consider other restaurant options if you are in the area looking for authentic Chinese food ;).
+1.) Caido is a great tool... very comparable to Burp of course, but nice.
+2.) I should leave the beginner challenges for beginners.
+3.) I'm a giraffe...
