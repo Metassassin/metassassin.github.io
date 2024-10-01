@@ -251,5 +251,7 @@ Later in the code, we can see that if the variable is 'allowed' has the value of
 ## Lessons Learned
 
 1.) Caido is a great tool... very comparable to Burp of course, but nice.
+
 2.) I should leave the beginner challenges for beginners.
+
 3.) I'm a giraffe...
