@@ -195,7 +195,7 @@ The challenge PHP file contents:
 
 {% include figure.liquid path="assets/img/WEB - Giraffe Home.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 
-2.) Take this bit of information, download the html file and open it in a text editor. The very top of this file defines a variable, 'allowed,' whose value is either true or false depending on the presense of HTTP_X_FORWARDED_FOR:
+2.) Take this bit of information, download the html file and open it in a text editor. The very top of this file defines a variable, 'allowed,' whose value is either true or false depending on the presense of HTTP_X_FORWARDED_FOR.
 
 {% details Click here for code %}
   {% highlight php %} 
@@ -213,7 +213,9 @@ The challenge PHP file contents:
   {% endhighlight %} 
 {% enddetails %}
 
-3.) HTTP_X_FORWARDED_FOR is referencing the HTTP header which defines an IP address or servername that a request is being forwarded on behalf of, and the actual HTTP header for the request appears as `X-Forwarded-For: [IP]`. In this particular instance, the only option to make the variable 'allowed' a true value is localhost, or 127.0.0.1. 
+Later in the code, we can see that if the variable is 'allowed' has the value of 'True,' then the lovely giraffe notes will be returned with the flag.
+
+3.) HTTP_X_FORWARDED_FOR is referencing the HTTP header which defines an IP address or servername that a request is being forwarded on behalf of, and the actual HTTP header for the request appears as `X-Forwarded-For: [IP]`. In this particular instance, the only option to make the variable 'allowed' a true value is localhost, or 127.0.0.1.
 
 4.) In Caido, I started by intercepting requests and visiting the challenge URL to capture the request so I can edit the headers. 
 
@@ -239,7 +241,7 @@ The challenge PHP file contents:
 {% enddetails %}
 
 
-6.) I sent the request, submitted my flag and got the solve: `CACI{1_lik3_g1raff3s_4_l0t}`
+6.) I sent the request, which met the criteria of setting 'allowed' to 'True,' so I got my flag and submitted the solve: `CACI{1_lik3_g1raff3s_4_l0t}`
 
 {% include figure.liquid path="assets/img/WEB - Giraffe Caido Response.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 {% include figure.liquid path="assets/img/WEB - Giraffe Flag.png" class="img-fluid rounded z-depth-1" zoomable=false %}
