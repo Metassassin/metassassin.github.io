@@ -288,5 +288,7 @@ The challenge 'flag.vcd' file contents:
 ## Lessons Learned
 
 1.) Learning new stuff is always a fun time. Prior to this experience, I had not been exposed to RTL, so I am glad to have the chance.
+
 2.) Persistence and attention to detail are key if you don't know where to start.
+
 3.) I need to expose myself to more new concepts!
