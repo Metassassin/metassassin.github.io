@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: A Dip in the Pool as an Aspiring Social Engineer
-date: 2024-09-23
+date: 2024-10-07
 description: The first mid-course capstone box for the PNPT course
 tags: general
 categories: hacking
