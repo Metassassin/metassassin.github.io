@@ -2,9 +2,10 @@
 layout: distill
 title: A Dip in the Pool as an Aspiring Social Engineer
 date: 2024-10-07
-description: The first mid-course capstone box for the PNPT course
+description: My second great social engineering experience!
 tags: general
 categories: hacking
+featured: true
 
 authors:
   - name: Metassassin
