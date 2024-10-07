@@ -37,15 +37,21 @@ The morning started very typical: Wake up, check email, make sure any pending in
 It was a relatively short drive to our location. We had previously scoped it out on Google Earth to understand the buildings we would be checking before actually being onsite - an activity that really helps you look like you belong there. We only knew about this engagement a week prior, so we didn't have time to obtain any cool vendor outfits or company swag that we found from the online stores used by the company. All of that is to say we went in classic attire for what we thought an IT person or Network admin would appear as.
 
 Upon arriving to the building, the unknowns that we were dealing with were:
+
 1.) Is there a badge reader at the main entrance, and if yes, how do we get in?
+
 2.) Is someone going to challenge us? How do we push back if they do? 
+
 3.) Are we going to say anything to anyone, or are we entering the site and just acting like we belong?
 
 Neither of us had been on an official audit like this, so we wanted to make sure that we crossed our t's and dotted our i's. I have consumed a lot of content from famous social engineers via books and competitions, such as the elite DEF CON competition held by the Social Engineering Community.
 
 What we decided was:
+
 1.) If there is a badge reader, we will try the door anyway, usher a receptionist, look for other entrances, or tailgate someone in.
+
 2.) If someone challenged us, we wouldn't put up a huge fight. Smile, explain we are with the network team checking the ports, and worst case scenario was reveal our letter from HR.
+
 3.) We decided to present the greatest opportunity for challenging us, and we opted to just begin working unless told otherwise.
 
 The other small detail that we planned to contribute to our success was going on a Friday, because we assumed it would be when people cared the least about causing a fuss, and they would generally be in a more upbeat mood.
