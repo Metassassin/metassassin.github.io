@@ -19,9 +19,11 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am Metassassin! I'm an IT professional, CTF team captain, ethical hacker, etc. My dream is to become a penetration tester and social engineer, and I will not stop until I get there.
+I am Metassassin! I'm an IT professional, former CTF team captain, ethical hacker, etc. My dream is to become a penetration tester and social engineer, and I will not stop until I get there.
 
 The team I lead is called <a href="/ctf/">Hellbound</a>, which is a passionate group of bright individuals who love to solve complex puzzles. Feel free to check us out on [CTFtime](https://ctftime.org/team/243673).
 
 <em>"Anyone who loves to play chess knows that it’s enough to defeat your opponent...you don’t have to loot his kingdom or seize his assets to make it worthwhile."</em>
 <strong>-Kevin Mitnick</strong>
+
+QmVsb3ZlZCwgY3VyaW91cyBvbmUuLi4gSSBsZWF2ZSB0aGlzIGdpZnQgdG8geW91LiBJdCBpcyBkb3dubG9hZGFibGUuIGh0dHBzOi8vd2ViLmFyY2hpdmUub3JnL3dlYi8yMDI0MDYwNjE1NDcwOC9odHRwczovL2dpdGh1Yi5jb20vSGVsbGJvdW5kaW5nL1JlbGlj
