@@ -4,9 +4,9 @@
     - name: Full Name
       value: Metassassin
     - name: Age
-      value: 24
+      value: 25
     - name: Location
-      value: Dallas, TX, USA
+      value: Colorado, USA
     - name: Languages
       value: English, Spanish
 
@@ -41,9 +41,37 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Security Administrator
+      institution: Redacted for Privacy - Non-profit Advancement for High Education
+      year: 2024 - Current
+      description:
+        - title: Responsibilities
+          contents: 
+            - Incident response planning/incident response (war room, playbooks, IRP)
+            - Management of web proxy, MFA platform, security awareness tools and training, etc.
+            - Security policy and procedure creation
+            - Quarterly security awareness campaigns
+            - Participation in recorded training material
+            - Security alert response / on-call
+            - Table-top exercise design, planning, coordination, delivery and lessons learned
+            - Physical security
+            - Computer forensics
+            - Threat intelligence - managing RSS feeds
+            - Ticket queue management
+            - Application security configuration management
+            - Third-party risk management
+        - title: Proficiencies and Skills
+          contents:
+            - Public speaking
+            - Leading investigations
+            - Risk assessment
+            - Azure cloud
+            - Windows, Linux and MacOS
+            - Cyber kill chain by Lockheed Martin
+            - NIST 2.0, SEC, GDPR
     - title: Senior Cybersecurity Analyst
-      institution: Redacted for Privacy - Global Food Manufacturer
-      year: 2022 - Current
+      institution: JBS USA
+      year: 2022 - 2024
       description:
         - title: Responsibilities
           contents: 
@@ -82,7 +110,7 @@
             - Cyber kill chain by Lockheed Martin
             - NIST 2.0, SEC, GDPR
     - title: Security Administrator
-      institution: Redacted for Privacy - Global Food Manufacturer
+      institution: JBS USA
       year: 2021 - 2022
       description:
         - title: Responsibilities
@@ -113,7 +141,7 @@
             - NIST
             - Training new employees
     - title: Desktop Support Technician
-      institution: Redacted for Privacy - Global Food Manufacturer
+      institution: JBS USA
       year: 2018 - 2021
       description:
         - title: Responsibilities
