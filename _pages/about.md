@@ -25,5 +25,3 @@ The team I lead is called <a href="/ctf/">Hellbound</a>, which is a passionate g
 
 <em>"Anyone who loves to play chess knows that it’s enough to defeat your opponent...you don’t have to loot his kingdom or seize his assets to make it worthwhile."</em>
 <strong>-Kevin Mitnick</strong>
-
-QmVsb3ZlZCwgY3VyaW91cyBvbmUuLi4gSSBsZWF2ZSB0aGlzIGdpZnQgdG8geW91LiBJdCBpcyBkb3dubG9hZGFibGUuIGh0dHBzOi8vd2ViLmFyY2hpdmUub3JnL3dlYi8yMDI0MDYwNjE1NDcwOC9odHRwczovL2dpdGh1Yi5jb20vSGVsbGJvdW5kaW5nL1JlbGlj
