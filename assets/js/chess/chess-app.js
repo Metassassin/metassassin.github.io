@@ -121,12 +121,45 @@ class ChessApp {
       this.setStatus("Engine error \u2014 try refreshing the page.", "danger");
     };
 
-    this.engine.onmessage = (e) => this.onEngineMessage(String(e.data));
+    this.engine.onmessage = (e) => this.onEngineMessage(e.data);
     this.engine.postMessage("uci");
+
+    // If the engine never confirms readiness, don't fail silently --
+    // surface it so it's diagnosable from the page/console instead of
+    // just looking like the AI is doing nothing forever.
+    this.uciokWatchdog = setTimeout(() => {
+      if (!this.engineReady) {
+        console.error(
+          "[chess] Stockfish never replied to 'uci' within 10s -- engine did not load correctly."
+        );
+        this.setStatus(
+          "Engine failed to start \u2014 open the console (F12) for details, or try refreshing.",
+          "danger"
+        );
+      }
+    }, 10000);
   }
 
-  onEngineMessage(line) {
+  onEngineMessage(raw) {
+    // Different Stockfish builds are inconsistent about batching: some
+    // send one UCI line per postMessage, others send several lines
+    // (newline-separated) in a single message, sometimes with trailing
+    // whitespace. Splitting defensively here avoids a strict-equality
+    // check silently never matching and leaving engineReady stuck false
+    // forever (which would make the engine look like it's just not
+    // moving, for either color).
+    String(raw)
+      .split("\n")
+      .map((line) => line.trim())
+      .filter(Boolean)
+      .forEach((line) => this.handleEngineLine(line));
+  }
+
+  handleEngineLine(line) {
+    console.debug("[stockfish]", line);
+
     if (line === "uciok") {
+      clearTimeout(this.uciokWatchdog);
       this.configureEngineOptions();
       this.engine.postMessage("isready");
       return;
