@@ -60,3 +60,17 @@ nav_order: 2
 </noscript>
 
 <script type="module" src="{{ '/assets/js/chess/chess-app.js' | relative_url }}"></script>
+<script>
+  // Safety net: if the module script above fails to load or throws before
+  // it finishes wiring up the app (e.g. a CDN hiccup), don't leave the
+  // page stuck silently on "Loading engine..." forever -- surface it.
+  setTimeout(function () {
+    if (!window.__chessApp) {
+      var statusEl = document.getElementById("chess-status");
+      if (statusEl) {
+        statusEl.innerHTML =
+          '<span class="status-dot danger"></span>Couldn\'t start the chess app. Try refreshing the page \u2014 if it keeps happening, open the browser console (F12) for the error.';
+      }
+    }
+  }, 6000);
+</script>
