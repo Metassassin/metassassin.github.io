@@ -91,11 +91,19 @@ html[data-theme="dark"] body::before {
 }
 
 .container,
-header,
 footer,
 main {
   position: relative;
   z-index: 1;
+}
+
+// The navbar is fixed/sticky and must always render above scrolling page
+// content. Giving it the same z-index as <main> (as a previous version of
+// this file did) let <main> paint over it on scroll, since same-z-index
+// siblings stack in DOM order. Isolating it here fixes that.
+header {
+  position: relative;
+  z-index: 1050;
 }
 
 h1,
@@ -141,7 +149,7 @@ html[data-theme="dark"] a:hover {
 // ---------------------------------------------------------------------------
 .navbar {
   backdrop-filter: blur(10px);
-  background-color: rgba(5, 6, 13, 0.72) !important;
+  background-color: rgba(5, 6, 13, 0.88) !important;
   border-bottom: 1px solid var(--global-divider-color);
   transition: box-shadow 0.2s ease;
 }
