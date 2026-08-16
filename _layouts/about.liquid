@@ -2,7 +2,8 @@
 layout: default
 ---
 <div class="post">
-  <header class="post-header">
+  <header class="post-header cp-hero">
+    <span class="cp-hero-eyebrow">system online</span>
     <h1 class="post-title">
       {% if site.title == 'blank' %}
         <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
@@ -11,7 +12,11 @@ layout: default
         {{ site.title }}
       {% endif %}
     </h1>
-    <p class="desc">{{ page.subtitle }}</p>
+    <p class="desc cp-hero-sub">{{ page.subtitle }}</p>
+    <div class="cp-hero-cta">
+      <a class="btn-cp" href="{{ '/chess/' | relative_url }}"><i class="ti ti-chess-knight"></i> Play Chess</a>
+      <a class="btn-cp btn-cp-magenta" href="{{ '/ctf/' | relative_url }}"><i class="ti ti-flag"></i> Meet Hellbound</a>
+    </div>
   </header>
 
   <article>
