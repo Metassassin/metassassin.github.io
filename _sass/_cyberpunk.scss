@@ -207,12 +207,15 @@ html[data-theme="dark"] .navbar-brand.title {
     box-shadow 0.15s ease,
     border-color 0.15s ease;
 
-  // The theme's own light/dark/system icon-swap CSS (in _themes.scss)
-  // manually nudges each icon into place with padding-left/padding-top,
-  // a leftover from when this button had no border and centered its
-  // icon by hand. Flexbox now does that centering properly, so those
-  // manual offsets just have to be neutralized here.
-  i {
+  // The theme (_themes.scss) positions whichever icon is currently shown
+  // using `padding-left: 10px; padding-top: 12px` on #light-toggle-system
+  // / -dark / -light. Those are ID selectors, so they outrank a plain
+  // `#light-toggle i` rule -- the offsets have to be undone by matching
+  // the same IDs here, or the icon sits low and to the right of centre
+  // inside the bordered box.
+  #light-toggle-system,
+  #light-toggle-dark,
+  #light-toggle-light {
     padding: 0 !important;
     margin: 0 !important;
     font-size: 1.05rem;
