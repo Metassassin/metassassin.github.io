@@ -64,6 +64,9 @@ nav_order: 2
   // Safety net: if the module script above fails to load or throws before
   // it finishes wiring up the app (e.g. a CDN hiccup), don't leave the
   // page stuck silently on "Loading engine..." forever -- surface it.
+  // This only covers the app failing to *boot*; once window.__chessApp
+  // exists it manages its own status (including its own, longer watchdog
+  // for the engine download), so this must not overwrite that.
   setTimeout(function () {
     if (!window.__chessApp) {
       var statusEl = document.getElementById("chess-status");
