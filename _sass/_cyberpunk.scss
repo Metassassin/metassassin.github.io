@@ -224,9 +224,7 @@ html[data-theme="dark"] .navbar-brand.title {
   right: 0;
 }
 
-// Theme toggle: icon only, borderless. The flex box is still needed even
-// without a visible border -- it's what centres the icon and keeps the
-// button the same height as its neighbours in the navbar.
+// Theme toggle: icon-only, so it gets a small centered square.
 #light-toggle {
   display: inline-flex;
   align-items: center;
@@ -234,38 +232,40 @@ html[data-theme="dark"] .navbar-brand.title {
   width: 2.25rem;
   height: 2.25rem;
   padding: 0;
-  border: none;
-  background: transparent;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
   transition:
-    color 0.15s ease,
-    text-shadow 0.15s ease;
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
 
   // The theme (_themes.scss) positions whichever icon is currently shown
   // using `padding-left: 10px; padding-top: 12px` on #light-toggle-system
   // / -dark / -light. Those are ID selectors, so they outrank a plain
   // `#light-toggle i` rule -- the offsets have to be undone by matching
-  // the same IDs here, or the icon sits low and right of centre.
+  // the same IDs here, or the icon sits low and to the right of centre
+  // inside the bordered box.
   #light-toggle-system,
   #light-toggle-dark,
   #light-toggle-light {
     padding: 0 !important;
     margin: 0 !important;
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     line-height: 1;
   }
 }
 
-// Search ("ctrl k" label + icon): borderless to match.
+// Search: has a text label ("ctrl k") plus an icon, so it needs a
+// content-sized pill rather than a fixed square.
 #search-toggle {
   display: inline-flex;
   align-items: center;
   height: 2.25rem;
-  padding: 0 0.35rem;
-  border: none;
-  background: transparent;
+  padding: 0 0.85rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
   transition:
-    color 0.15s ease,
-    text-shadow 0.15s ease;
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
 
   .nav-link {
     display: inline-flex;
@@ -275,16 +275,10 @@ html[data-theme="dark"] .navbar-brand.title {
   }
 }
 
-// With the borders gone, hover feedback moves to the icon/text itself so
-// the controls still respond visibly to the cursor.
-#search-toggle:hover,
-#light-toggle:hover {
-  color: var(--global-hover-color);
-}
-
 html[data-theme="dark"] #search-toggle:hover,
 html[data-theme="dark"] #light-toggle:hover {
-  text-shadow: var(--cp-glow-cyan);
+  border-color: $cp-cyan;
+  box-shadow: var(--cp-glow-cyan);
 }
 
 // Scroll progress bar
