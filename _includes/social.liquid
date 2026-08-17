@@ -118,6 +118,22 @@
 {% if site.discord_id %}
   <a href="https://discord.com/users/{{ site.discord_id }}" title="Discord"><i class="fa-brands fa-discord"></i></a>
 {% endif %}
+{% comment %}
+  Steam profile URLs come in two shapes: a custom vanity name
+  (steamcommunity.com/id/NAME) or a 17-digit numeric id
+  (steamcommunity.com/profiles/7656119...). Set steam_id in _config.yml to
+  whichever you have -- an all-digit value is routed to /profiles/, anything
+  else to /id/ -- so the link works without editing this file.
+{% endcomment %}
+{% if site.steam_id %}
+  {% assign steam_digits = site.steam_id | remove: '0' | remove: '1' | remove: '2' | remove: '3' | remove: '4' | remove: '5' | remove: '6' | remove: '7' | remove: '8' | remove: '9' %}
+  {% if steam_digits == '' %}
+    {% assign steam_path = 'profiles' %}
+  {% else %}
+    {% assign steam_path = 'id' %}
+  {% endif %}
+  <a href="https://steamcommunity.com/{{ steam_path }}/{{ site.steam_id }}" title="Steam"><i class="fa-brands fa-steam"></i></a>
+{% endif %}
 {% if site.zotero_username %}
   <a href="https://www.zotero.org/{{ site.zotero_username }}" title="Zotero"><i class="ai ai-zotero"></i></a>
 {% endif %}
