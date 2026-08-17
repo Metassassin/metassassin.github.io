@@ -4,21 +4,19 @@
  * Browsers refuse to instantiate a classic Worker directly from a
  * cross-origin script URL, so this tiny same-origin file exists purely to
  * `importScripts()` the real engine from cdnjs (importScripts is not subject
- * to that restriction). Everything else -- the UCI protocol, search, etc. --
- * lives entirely inside the imported engine; this file adds no logic of its
- * own so there's nothing here to maintain as the engine is updated.
+ * to that restriction).
  *
- * Engine: stockfish.js 10.0.2 (niklasf/lichess-org build), single-threaded
- * asm.js/WASM hybrid. Chosen deliberately over newer multi-threaded builds
- * because those require cross-origin-isolation (COOP/COEP) response headers
- * that GitHub Pages cannot set, which would break the engine in production.
+ * Engine: stockfish.js 10.0.2 (lichess-org/niklasf build), asm.js flavour.
+ *
+ * Why asm.js and not the WASM build: the `stockfish.wasm.min.js` file is
+ * only a loader -- at runtime it fetches a separate `stockfish.wasm`
+ * binary, and Emscripten resolves that path relative to the *worker's own
+ * origin* (this site), not relative to the CDN it was imported from. On a
+ * static host that means a request for /assets/js/chess/stockfish.wasm,
+ * which 404s, so the engine dies silently before ever answering `uci`.
+ * The asm.js build is a single self-contained file with no companion
+ * binary, so it has no such path dependency. It's somewhat slower than
+ * WASM, but every difficulty level here is bounded by an explicit
+ * `movetime`, so search time is capped regardless.
  */
-var wasmSupported =
-  typeof WebAssembly === "object" &&
-  WebAssembly.validate(Uint8Array.of(0x0, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00));
-
-importScripts(
-  wasmSupported
-    ? "https://cdnjs.cloudflare.com/ajax/libs/stockfish.js/10.0.2/stockfish.wasm.min.js"
-    : "https://cdnjs.cloudflare.com/ajax/libs/stockfish.js/10.0.2/stockfish.min.js"
-);
+importScripts("https://cdnjs.cloudflare.com/ajax/libs/stockfish.js/10.0.2/stockfish.min.js");

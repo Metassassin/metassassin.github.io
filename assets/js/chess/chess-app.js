@@ -58,7 +58,7 @@ class ChessApp {
     this.buildBoardSquares();
     this.attachControlListeners();
     this.initEngine();
-    this.setStatus("Loading engine\u2026", "warn");
+    this.setStatus("Loading engine\u2026 (first load downloads ~1MB)", "warn");
     this.render();
   }
 
@@ -117,7 +117,8 @@ class ChessApp {
       return;
     }
 
-    this.engine.onerror = () => {
+    this.engine.onerror = (err) => {
+      console.error("[chess] Worker error:", err && (err.message || err));
       this.setStatus("Engine error \u2014 try refreshing the page.", "danger");
     };
 
@@ -126,18 +127,20 @@ class ChessApp {
 
     // If the engine never confirms readiness, don't fail silently --
     // surface it so it's diagnosable from the page/console instead of
-    // just looking like the AI is doing nothing forever.
+    // just looking like the AI is doing nothing forever. The asm.js
+    // engine build is a large single file that has to download and
+    // compile, so this is deliberately generous on slow connections.
     this.uciokWatchdog = setTimeout(() => {
       if (!this.engineReady) {
         console.error(
-          "[chess] Stockfish never replied to 'uci' within 10s -- engine did not load correctly."
+          "[chess] Stockfish never replied to 'uci' within 25s -- engine did not load correctly."
         );
         this.setStatus(
           "Engine failed to start \u2014 open the console (F12) for details, or try refreshing.",
           "danger"
         );
       }
-    }, 10000);
+    }, 25000);
   }
 
   onEngineMessage(raw) {
