@@ -14,15 +14,15 @@ profile:
       <li><i class="fa-solid fa-flag"></i><span> CTFtime: </span><strong>Enma</strong></li>
       <li><i class="fa-solid fa-terminal"></i><span> TryHackMe: </span><strong>MetaSphere</strong></li>
     </ul>
+</a></div>
 
 social: true # includes social icons at the bottom of the page
 ---
 
-I'm an IT professional, former CTF team captain, and ethical hacker. My dream is to
-become a penetration tester and social engineer, and I will not stop until I get there.
+I'm an IT professional, former CTF team captain, and ethical hacker.
 
 I lead <a href="/ctf/">Hellbound</a> — a passionate group of bright individuals who love
-solving complex puzzles. Feel free to check us out on
+solving complex puzzles. Feel free to check the page on
 [CTFtime](https://ctftime.org/team/243673).
 
 <div class="cp-focus-grid" markdown="0">
