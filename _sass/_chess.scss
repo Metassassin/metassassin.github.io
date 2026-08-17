@@ -34,7 +34,7 @@
   border: 1px solid var(--global-divider-color);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 0 1px rgba(0, 240, 255, 0.08);
+  box-shadow: 0 0 0 1px rgba(#{$cp-accent-rgb}, 0.1);
 }
 
 .cp-square {
@@ -54,12 +54,12 @@
 }
 
 html[data-theme="dark"] .cp-square.cp-light {
-  background: #172049;
+  background: #2a1e24;
   color: #f4f7ff;
 }
 
 html[data-theme="dark"] .cp-square.cp-dark {
-  background: #0a0e22;
+  background: #150e12;
   color: #f4f7ff;
 }
 
@@ -82,7 +82,7 @@ html[data-theme="light"] .cp-square.cp-dark {
 }
 
 .cp-square:hover {
-  box-shadow: inset 0 0 0 2px rgba(0, 240, 255, 0.35);
+  box-shadow: inset 0 0 0 2px rgba(#{$cp-accent-rgb}, 0.4);
 }
 
 .cp-square.cp-selected {
@@ -95,16 +95,16 @@ html[data-theme="light"] .cp-square.cp-dark {
   width: 28%;
   height: 28%;
   border-radius: 50%;
-  background: rgba(0, 240, 255, 0.55);
-  box-shadow: 0 0 8px rgba(0, 240, 255, 0.7);
+  background: rgba(#{$cp-accent-rgb}, 0.6);
+  box-shadow: 0 0 8px rgba(#{$cp-accent-rgb}, 0.75);
 }
 
 .cp-square.cp-legal-capture::after {
   width: 84%;
   height: 84%;
   background: transparent;
-  border: 3px solid rgba(255, 46, 196, 0.75);
-  box-shadow: 0 0 8px rgba(255, 46, 196, 0.6);
+  border: 3px solid rgba(#{$cp-accent-2-rgb}, 0.85);
+  box-shadow: 0 0 8px rgba(#{$cp-accent-2-rgb}, 0.7);
 }
 
 .cp-square.cp-last-move {
@@ -119,10 +119,10 @@ html[data-theme="light"] .cp-square.cp-dark {
 @keyframes cp-pulse-danger {
   0%,
   100% {
-    box-shadow: inset 0 0 0 3px rgba(255, 56, 96, 0.4);
+    box-shadow: inset 0 0 0 3px rgba(255, 92, 122, 0.45);
   }
   50% {
-    box-shadow: inset 0 0 0 3px rgba(255, 56, 96, 1);
+    box-shadow: inset 0 0 0 3px rgba(255, 92, 122, 1);
   }
 }
 

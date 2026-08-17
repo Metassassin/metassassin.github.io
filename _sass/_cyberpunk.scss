@@ -6,24 +6,55 @@
 
 // ---------------------------------------------------------------------------
 // Palette
+//
+// EDIT COLORS HERE. Everything below is driven off these values -- the
+// rgba() calls throughout this file and _chess.scss reference the *-rgb
+// triplets, so changing a colour here changes it everywhere (glows,
+// borders, hover fills, board highlights) without hunting for hardcoded
+// values.
+//
+// Current scheme: red primary accent, cyan reserved for the background
+// grid so the grid reads as a separate structural layer rather than
+// competing with the accent.
 // ---------------------------------------------------------------------------
-$cp-bg-void: #05060d; // near-black base
-$cp-bg-deep: #0a0e1c; // deep navy panels
-$cp-bg-panel: #0e1326; // card / panel surface
-$cp-bg-panel-light: #12182f;
+$cp-bg-void: #06060a; // near-black base
+$cp-bg-deep: #120a0e; // deep panels, faint red cast
+$cp-bg-panel: #170d12; // card / panel surface
+$cp-bg-panel-light: #1f1219;
 
-$cp-cyan: #00f0ff;
-$cp-cyan-dim: #0891a8;
-$cp-magenta: #ff2ec4;
-$cp-magenta-dim: #a6188f;
-$cp-violet: #7b2fff;
-$cp-green: #39ff88;
-$cp-amber: #ffb300;
-$cp-red: #ff3860;
+// --- Primary accent (red) -------------------------------------------------
+$cp-accent: #ff2b45;
+$cp-accent-rgb: 255, 43, 69;
+$cp-accent-dim: #b3122a; // darker red, used in light mode for contrast
 
-$cp-text: #e7ecf7;
-$cp-text-dim: #8b93b3;
-$cp-border: rgba(0, 240, 255, 0.25);
+// --- Secondary accent (warm orange-red, for hover / contrast) -------------
+$cp-accent-2: #ff7a1a;
+$cp-accent-2-rgb: 255, 122, 26;
+$cp-accent-2-dim: #b3500d;
+
+// --- Background grid (kept cyan, deliberately) ----------------------------
+$cp-grid: #00f0ff;
+$cp-grid-rgb: 0, 240, 255;
+
+// --- Status colours -------------------------------------------------------
+$cp-green: #39ff88; // ok / your turn
+$cp-amber: #ffb300; // warning / last move
+$cp-danger: #ff5c7a; // check / error -- deliberately lighter and pinker
+// than $cp-accent so it stays readable as an
+// alert against a red-accented UI.
+
+// --- Legacy aliases -------------------------------------------------------
+// Kept so any rule still referencing the old names keeps compiling.
+$cp-cyan: $cp-accent;
+$cp-cyan-dim: $cp-accent-dim;
+$cp-magenta: $cp-accent-2;
+$cp-magenta-dim: $cp-accent-2-dim;
+$cp-violet: $cp-accent-2;
+$cp-red: $cp-danger;
+
+$cp-text: #f2eaec;
+$cp-text-dim: #a89298;
+$cp-border: rgba($cp-accent-rgb, 0.25);
 
 $cp-font-display: "Orbitron", "Rajdhani", sans-serif;
 $cp-font-heading: "Rajdhani", "Inter", sans-serif;
@@ -44,15 +75,15 @@ html[data-theme="dark"] {
   --global-footer-bg-color: #{$cp-bg-deep};
   --global-footer-text-color: #{$cp-text-dim};
   --global-footer-link-color: #{$cp-cyan};
-  --global-divider-color: rgba(0, 240, 255, 0.15);
+  --global-divider-color: rgba(#{$cp-accent-rgb}, 0.18);
   --global-card-bg-color: #{$cp-bg-panel};
   --global-highlight-color: #{$cp-magenta};
-  --global-back-to-top-bg-color: rgba(0, 240, 255, 0.15);
+  --global-back-to-top-bg-color: rgba(#{$cp-accent-rgb}, 0.15);
   --global-back-to-top-text-color: #{$cp-cyan};
 
-  --cp-glow-cyan: 0 0 6px rgba(0, 240, 255, 0.55), 0 0 18px rgba(0, 240, 255, 0.25);
-  --cp-glow-magenta: 0 0 6px rgba(255, 46, 196, 0.55), 0 0 18px rgba(255, 46, 196, 0.25);
-  --cp-grid-line: rgba(0, 240, 255, 0.06);
+  --cp-glow-cyan: 0 0 6px rgba(#{$cp-accent-rgb}, 0.55), 0 0 18px rgba(#{$cp-accent-rgb}, 0.25);
+  --cp-glow-magenta: 0 0 6px rgba(#{$cp-accent-2-rgb}, 0.55), 0 0 18px rgba(#{$cp-accent-2-rgb}, 0.25);
+  --cp-grid-line: rgba(#{$cp-grid-rgb}, 0.07);
 }
 
 // Light mode: keep it usable/legible, same accent language, no black backgrounds
@@ -64,7 +95,7 @@ html[data-theme="light"] {
 
   --cp-glow-cyan: 0 0 0 rgba(0, 0, 0, 0);
   --cp-glow-magenta: 0 0 0 rgba(0, 0, 0, 0);
-  --cp-grid-line: rgba(123, 47, 255, 0.05);
+  --cp-grid-line: rgba(#{$cp-grid-rgb}, 0.045);
 }
 
 // ---------------------------------------------------------------------------
@@ -86,8 +117,8 @@ html[data-theme="dark"] body::before {
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background: radial-gradient(ellipse at 50% -10%, rgba(123, 47, 255, 0.16), transparent 55%),
-    radial-gradient(ellipse at 100% 110%, rgba(0, 240, 255, 0.08), transparent 50%);
+  background: radial-gradient(ellipse at 50% -10%, rgba(#{$cp-accent-rgb}, 0.14), transparent 55%),
+    radial-gradient(ellipse at 100% 110%, rgba(#{$cp-accent-2-rgb}, 0.07), transparent 50%);
 }
 
 .container,
@@ -149,7 +180,7 @@ html[data-theme="dark"] a:hover {
 // ---------------------------------------------------------------------------
 .navbar {
   backdrop-filter: blur(10px);
-  background-color: rgba(5, 6, 13, 0.88) !important;
+  background-color: rgba(6, 6, 10, 0.9) !important;
   border-bottom: 1px solid var(--global-divider-color);
   transition: box-shadow 0.2s ease;
 }
@@ -193,7 +224,9 @@ html[data-theme="dark"] .navbar-brand.title {
   right: 0;
 }
 
-// Theme toggle: icon-only, so it gets a small centered square.
+// Theme toggle: icon only, borderless. The flex box is still needed even
+// without a visible border -- it's what centres the icon and keeps the
+// button the same height as its neighbours in the navbar.
 #light-toggle {
   display: inline-flex;
   align-items: center;
@@ -201,40 +234,38 @@ html[data-theme="dark"] .navbar-brand.title {
   width: 2.25rem;
   height: 2.25rem;
   padding: 0;
-  border: 1px solid var(--global-divider-color);
-  border-radius: 6px;
+  border: none;
+  background: transparent;
   transition:
-    box-shadow 0.15s ease,
-    border-color 0.15s ease;
+    color 0.15s ease,
+    text-shadow 0.15s ease;
 
   // The theme (_themes.scss) positions whichever icon is currently shown
   // using `padding-left: 10px; padding-top: 12px` on #light-toggle-system
   // / -dark / -light. Those are ID selectors, so they outrank a plain
   // `#light-toggle i` rule -- the offsets have to be undone by matching
-  // the same IDs here, or the icon sits low and to the right of centre
-  // inside the bordered box.
+  // the same IDs here, or the icon sits low and right of centre.
   #light-toggle-system,
   #light-toggle-dark,
   #light-toggle-light {
     padding: 0 !important;
     margin: 0 !important;
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     line-height: 1;
   }
 }
 
-// Search: has a text label ("ctrl k") plus an icon, so it needs a
-// content-sized pill rather than a fixed square.
+// Search ("ctrl k" label + icon): borderless to match.
 #search-toggle {
   display: inline-flex;
   align-items: center;
   height: 2.25rem;
-  padding: 0 0.85rem;
-  border: 1px solid var(--global-divider-color);
-  border-radius: 6px;
+  padding: 0 0.35rem;
+  border: none;
+  background: transparent;
   transition:
-    box-shadow 0.15s ease,
-    border-color 0.15s ease;
+    color 0.15s ease,
+    text-shadow 0.15s ease;
 
   .nav-link {
     display: inline-flex;
@@ -244,10 +275,16 @@ html[data-theme="dark"] .navbar-brand.title {
   }
 }
 
+// With the borders gone, hover feedback moves to the icon/text itself so
+// the controls still respond visibly to the cursor.
+#search-toggle:hover,
+#light-toggle:hover {
+  color: var(--global-hover-color);
+}
+
 html[data-theme="dark"] #search-toggle:hover,
 html[data-theme="dark"] #light-toggle:hover {
-  border-color: $cp-cyan;
-  box-shadow: var(--cp-glow-cyan);
+  text-shadow: var(--cp-glow-cyan);
 }
 
 // Scroll progress bar
@@ -286,7 +323,7 @@ a.btn-cp {
 }
 
 .btn-cp:hover {
-  background: rgba(0, 240, 255, 0.08);
+  background: rgba(#{$cp-accent-rgb}, 0.1);
   box-shadow: var(--cp-glow-cyan);
   color: $cp-cyan;
   transform: translateY(-1px);
@@ -298,7 +335,7 @@ a.btn-cp {
 }
 
 .btn-cp-magenta:hover {
-  background: rgba(255, 46, 196, 0.08);
+  background: rgba(#{$cp-accent-2-rgb}, 0.1);
   box-shadow: var(--cp-glow-magenta);
   color: $cp-magenta;
 }
@@ -331,7 +368,7 @@ html[data-theme="dark"] .card.hoverable:hover {
 }
 
 html[data-theme="dark"] .hud-panel {
-  box-shadow: inset 0 0 0 1px rgba(0, 240, 255, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(#{$cp-accent-rgb}, 0.06);
 }
 
 .hud-panel::before,
