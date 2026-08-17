@@ -10,11 +10,12 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <ul class="cp-profile-list">
-      <li><i class="fa-brands fa-discord"></i><span>Discord</span><strong>Metassassin</strong></li>
-      <li><i class="fa-solid fa-flag"></i><span>CTFtime</span><strong>Enma</strong></li>
-      <li><i class="fa-solid fa-terminal"></i><span>TryHackMe</span><strong>MetaSphere</strong></li>
+      <li><i class="fa-brands fa-discord"></i><span> Discord: </span><strong>Metassassin</strong></li>
+      <li><i class="fa-solid fa-flag"></i><span> CTFtime: </span><strong>Enma</strong></li>
+      <li><i class="fa-solid fa-terminal"></i><span> TryHackMe: </span><strong>MetaSphere</strong></li>
     </ul>
-    <div class="cp-thm-badge"><script src="https://tryhackme.com/badge/1031259"></script></div>
+    <div class="cp-thm-badge"><a href="https://tryhackme.com/p/MetaSphere"><img src="https://tryhackme-badges.s3.amazonaws.com/MetaSphere.png" alt="TryHackMe: MetaSphere">
+</a></div>
 
 social: true # includes social icons at the bottom of the page
 ---
