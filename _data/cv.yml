@@ -4,7 +4,7 @@
     - name: Full Name
       value: Metassassin
     - name: Age
-      value: 25
+      value: 26
     - name: Location
       value: Colorado, USA
     - name: Languages
@@ -15,18 +15,21 @@
   contents:
     - title: Master of Science - Cybersecurity and Information Assurance
       institution: Western Governors University
+      honors: NSA Validated PoS and NSA CAE
       year: 2024
       description:
         - My pursuit of a Master of Science in Cybersecurity and Information Assurance (MSCSIA) was fueled by a desire to further expand my expertise and contribute meaningfully to the security landscape. This advanced degree demanded rigorous research, strategic thinking, and a commitment to continuous growth. It deepened my understanding of complex security architectures, governance, and compliance while honing my leadership skills. Through hands-on projects and in-depth analysis, I learned to tackle multifaceted security challenges with resilience and creativity. The program fostered my determination to not only keep pace with evolving threats but to anticipate them, solidifying my commitment to making a lasting impact in the field of cybersecurity.
             
     - title: Bachelor of Science - Cybersecurity and Information Assurance
       institution: Western Governors University
+      honors: NSA Validated PoS and NSA CAE
       year: 2023
       description:
         - After completing my degree in Computer Information Systems, I chose to pursue a Bachelor of Science in Cybersecurity and Information Assurance (BSCSIA) to deepen my understanding of the increasingly complex world of information security. This program required discipline and determination, pushing me to constantly evolve my technical knowledge and critical thinking skills. I embraced the challenge, driven by a deep curiosity about how systems work and how vulnerabilities can be mitigated or eliminated. This degree not only solidified my technical foundation but also strengthened my ability to adapt to new technologies and security paradigms. It instilled in me the importance of staying vigilant and persistent in an ever-changing field.
         
     - title: Associate of Applied Science - Computer Information Systems
       institution: Aims Community College
+      honors: Magna Cum Laude
       year: 2021
       description:
         - I pursued a degree in Computer Information Systems with a focus on cybersecurity because, much like an artist, I am driven by a desire to craft, but in this case, it’s about constructing secure systems that protect critical information. Just as art requires creativity, cybersecurity demands innovative thinking and adaptability to stay ahead of ever-evolving threats. Both disciplines call for precision, attention to detail, and an ability to see things from different perspectives—whether it's interpreting a digital landscape or analyzing a complex network. The rigor of cybersecurity, like that of Studio Art, involves problem-solving, resilience, and the willingness to constantly refine and improve. In the same way an artist captures vision in form, I’m passionate about translating complex security challenges into elegant, functional solutions that safeguard the digital world.
@@ -37,10 +40,23 @@
       description:
         - I pursued a Studio Art degree because I am driven by the profound need to create, express, and communicate in ways that transcend words. The field of art demands not only creativity, but also discipline, attention to detail, and the ability to see the world from unique perspectives. It requires resilience in the face of challenges, adaptability to experiment with new techniques, and the capacity to critically analyze and refine one’s work. As an artist, I’ve cultivated problem-solving skills, a sharp eye for aesthetics, and an openness to explore both the known and unknown. Studio Art is not just about producing visuals—it is about translating emotion, narrative, and vision into something tangible, a skillset that is valuable across many fields. A focus in photography and drawing. 
 
-
 - title: Experience
   type: time_table
   contents:
+    - title: IT Administrator
+      institution: Brielle Legal Solutions, LLC.
+      year: 2026 - Current
+      description:
+        - title: Responsibilities
+          contents: 
+            - Website creation and management
+            - Management of employee emails
+            - Domain services
+            - General IT requests
+        - title: Proficiencies and Skills
+          contents:
+            - Lightning fast web design
+            - AI integrated workflows
     - title: Security Administrator
       institution: Redacted for Privacy - Non-profit Advancement for High Education
       year: 2024 - Current
@@ -55,11 +71,13 @@
             - Security alert response / on-call
             - Table-top exercise design, planning, coordination, delivery and lessons learned
             - Physical security
-            - Computer forensics
+            - PCI compliance
             - Threat intelligence - managing RSS feeds
             - Ticket queue management
             - Application security configuration management
             - Third-party risk management
+            - CRM security
+            - Security awareness training and campaigning
         - title: Proficiencies and Skills
           contents:
             - Public speaking
@@ -69,6 +87,9 @@
             - Windows, Linux and MacOS
             - Cyber kill chain by Lockheed Martin
             - NIST 2.0, SEC, GDPR
+            - Security awareness
+            - PCI DSS
+            - HIPAA
     - title: Senior Cybersecurity Analyst
       institution: JBS USA
       year: 2022 - 2024
@@ -201,6 +222,9 @@
 - title: Conferences Attended
   type: time_table
   contents:
+    - year: 2026
+      items:
+        - DEF CON 34
     - year: 2024
       items:
         - DEF CON 32
