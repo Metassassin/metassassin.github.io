@@ -193,13 +193,52 @@ html[data-theme="dark"] .navbar-brand.title {
   right: 0;
 }
 
-#search-toggle,
+// Theme toggle: icon-only, so it gets a small centered square.
 #light-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
   border: 1px solid var(--global-divider-color);
   border-radius: 6px;
   transition:
     box-shadow 0.15s ease,
     border-color 0.15s ease;
+
+  // The theme's own light/dark/system icon-swap CSS (in _themes.scss)
+  // manually nudges each icon into place with padding-left/padding-top,
+  // a leftover from when this button had no border and centered its
+  // icon by hand. Flexbox now does that centering properly, so those
+  // manual offsets just have to be neutralized here.
+  i {
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 1.05rem;
+    line-height: 1;
+  }
+}
+
+// Search: has a text label ("ctrl k") plus an icon, so it needs a
+// content-sized pill rather than a fixed square.
+#search-toggle {
+  display: inline-flex;
+  align-items: center;
+  height: 2.25rem;
+  padding: 0 0.85rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+  transition:
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
+
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0 !important;
+  }
 }
 
 html[data-theme="dark"] #search-toggle:hover,
