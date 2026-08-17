@@ -14,7 +14,6 @@ profile:
       <li><i class="fa-solid fa-flag"></i><span> CTFtime: </span><strong>Enma</strong></li>
       <li><i class="fa-solid fa-terminal"></i><span> TryHackMe: </span><strong>MetaSphere</strong></li>
     </ul>
-</a></div>
 
 social: true # includes social icons at the bottom of the page
 ---
