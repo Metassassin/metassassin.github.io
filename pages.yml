@@ -1,0 +1,274 @@
+# Pages CMS configuration
+# Docs: https://pagescms.org/docs/
+#
+# NOTE ON SAFETY: Pages CMS rewrites a file based on the schema below. Any
+# field NOT declared here can be dropped when the file is saved from the CMS.
+# That's why _config.yml is deliberately NOT managed here -- it has ~300 lines
+# of settings, and a lossy round-trip would break the site. Edit that by hand.
+
+media:
+  input: assets/img
+  output: /assets/img
+  categories: [image]
+
+content:
+  # ---------------------------------------------------------------------
+  # Blog posts
+  # ---------------------------------------------------------------------
+  - name: posts
+    label: Blog posts
+    type: collection
+    path: _posts
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date, categories]
+      primary: date
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+
+      - name: date
+        label: Date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+
+      - name: description
+        label: Description
+        type: string
+        description: One-line summary shown on the blog index.
+
+      - name: layout
+        label: Layout
+        type: select
+        default: distill
+        options:
+          values: [distill, post]
+        description: "distill = write-up style with a table of contents."
+
+      - name: categories
+        label: Category
+        type: string
+        description: "e.g. ctf, hacking"
+
+      - name: tags
+        label: Tags
+        type: string
+        description: "e.g. write-ups, general"
+
+      - name: featured
+        label: Featured
+        type: boolean
+        default: false
+        description: Pin this post to the top of the blog index.
+
+      - name: giscus_comments
+        label: Enable comments
+        type: boolean
+        default: false
+
+      - name: authors
+        label: Authors
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: url, label: URL, type: string }
+          - name: affiliations
+            label: Affiliation
+            type: object
+            fields:
+              - { name: name, label: Name, type: string }
+
+      - name: toc
+        label: Table of contents
+        type: object
+        list: true
+        description: Section headings, in order. Only used by the distill layout.
+        fields:
+          - { name: name, label: Section name, type: string }
+
+      - name: body
+        label: Body
+        type: text
+        description: Markdown.
+
+  # ---------------------------------------------------------------------
+  # Drafts (same shape as posts, not published until moved)
+  # ---------------------------------------------------------------------
+  - name: drafts
+    label: Drafts
+    type: collection
+    path: _drafts
+    filename: "{primary}.md"
+    view:
+      fields: [title, description]
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - name: layout
+        label: Layout
+        type: select
+        default: distill
+        options:
+          values: [distill, post]
+      - { name: categories, label: Category, type: string }
+      - { name: tags, label: Tags, type: string }
+      - { name: body, label: Body, type: text }
+
+  # ---------------------------------------------------------------------
+  # About page
+  # ---------------------------------------------------------------------
+  - name: about
+    label: About page
+    type: file
+    path: _pages/about.md
+    fields:
+      - { name: layout, label: Layout, type: string, default: about, hidden: true }
+      - { name: title, label: Nav title, type: string }
+      - { name: permalink, label: Permalink, type: string, hidden: true }
+      - name: subtitle
+        label: Subtitle
+        type: string
+        description: Shown under the big heading in the hero.
+
+      - name: profile
+        label: Profile panel
+        type: object
+        fields:
+          - name: align
+            label: Align
+            type: select
+            options:
+              values: [right, left]
+          - { name: image, label: Image, type: image }
+          - { name: image_circular, label: Circular crop, type: boolean }
+          - name: more_info
+            label: Contact block
+            type: text
+            description: >
+              Raw HTML. Keep the existing <ul class="cp-profile-list"> markup
+              so the styling applies.
+
+      - name: social
+        label: Show social icons
+        type: boolean
+
+      - name: body
+        label: Body
+        type: text
+        description: >
+          Markdown + HTML. The focus cards and pull quote are HTML blocks --
+          leave their class names intact so they keep their styling.
+
+  # ---------------------------------------------------------------------
+  # CV
+  #
+  # Every section's `contents` uses ONE shared item shape, so a single
+  # schema covers all three section types. Which fields actually render
+  # depends on the section's `type`:
+  #   map        -> title + value (and optional linkitems)
+  #   time_table -> year, title, institution, department, description/items
+  #   list       -> title only
+  # Leave the fields a section doesn't use blank.
+  # ---------------------------------------------------------------------
+  - name: cv
+    label: CV
+    type: file
+    path: _data/cv.yml
+    list: true
+    fields:
+      - name: title
+        label: Section name
+        type: string
+        required: true
+
+      - name: type
+        label: Section style
+        type: select
+        required: true
+        options:
+          values: [map, time_table, list]
+        description: >
+          map = two-column table (contact info). time_table = dated entries
+          with institution. list = simple bullets.
+
+      - name: contents
+        label: Entries
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Title
+            type: string
+            description: The main line. Used by every section style.
+
+          - name: value
+            label: Value
+            type: string
+            description: Right-hand column. "map" sections only.
+
+          - name: year
+            label: Year
+            type: string
+
+          - name: institution
+            label: Institution
+            type: string
+
+          - name: department
+            label: Sub-line
+            type: string
+            description: >
+              Renders under the institution -- good for honors,
+              department, or a specialisation.
+
+          - name: location
+            label: Location
+            type: string
+
+          - name: maindescription
+            label: Intro paragraph
+            type: text
+
+          - name: description
+            label: Bullet points
+            type: string
+            list: true
+
+          - name: items
+            label: Items
+            type: string
+            list: true
+            description: Alternative bullet list (used by Certifications).
+
+          - name: linkitems
+            label: Link buttons
+            type: object
+            list: true
+            fields:
+              - { name: linkname, label: Button label, type: string }
+              - { name: link, label: URL, type: string }
+
+  # ---------------------------------------------------------------------
+  # CTF page
+  # ---------------------------------------------------------------------
+  - name: ctf
+    label: CTF page
+    type: file
+    path: _pages/ctf.md
+    fields:
+      - { name: layout, label: Layout, type: string, hidden: true }
+      - { name: title, label: Nav title, type: string }
+      - { name: permalink, label: Permalink, type: string, hidden: true }
+      - { name: description, label: Description, type: string }
+      - { name: nav, label: Show in nav, type: boolean }
+      - { name: nav_order, label: Nav order, type: number }
+      - { name: body, label: Body, type: text }
